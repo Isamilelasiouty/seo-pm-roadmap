@@ -59,9 +59,40 @@ const TOTAL_TASKS = TOTAL_WEEKS * TASKS_PER_WEEK; // 48
 const TOTAL_ARTIFACTS = 12;
 
 // ==========================================
+// Theme Management (Light / Dark Mode)
+// ==========================================
+function initTheme() {
+  const savedTheme = safeGetItem('theme');
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = savedTheme ? savedTheme : (prefersDark ? 'dark' : 'light');
+  applyTheme(initialTheme);
+}
+
+function applyTheme(theme) {
+  const btn = document.getElementById('theme-toggle-btn');
+  if (theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    if (btn) btn.textContent = 'Theme: Light';
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+    if (btn) btn.textContent = 'Theme: Dark';
+  }
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const nextTheme = current === 'dark' ? 'light' : 'dark';
+  applyTheme(nextTheme);
+  safeSetItem('theme', nextTheme);
+}
+
+window.toggleTheme = toggleTheme;
+
+// ==========================================
 // Initialization on DOM Ready
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
   initStorageIndicator();
   initTabs();
   initAccordions();
