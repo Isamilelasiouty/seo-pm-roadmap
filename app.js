@@ -88,28 +88,88 @@ function initStorageIndicator() {
 }
 
 // ==========================================
-// Tabs Navigation
+// Tabs Navigation & Hash Deep Linking
 // ==========================================
 function initTabs() {
   const tabButtons = document.querySelectorAll('.nav-tab-btn');
-  const sections = document.querySelectorAll('.content-section');
 
   tabButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       const targetId = btn.getAttribute('data-tab');
-
-      tabButtons.forEach(b => b.classList.remove('active'));
-      sections.forEach(s => s.classList.remove('active'));
-
-      btn.classList.add('active');
-      const targetSection = document.getElementById(targetId);
-      if (targetSection) {
-        targetSection.classList.add('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+      switchTab(targetId);
     });
   });
+
+  // Deep linking via URL hash on load
+  const hash = window.location.hash.replace('#', '');
+  if (hash) {
+    const targetSection = document.getElementById(hash);
+    if (targetSection && targetSection.classList.contains('content-section')) {
+      switchTab(hash, false);
+    }
+  }
+
+  // Handle browser back/forward buttons
+  window.addEventListener('popstate', () => {
+    const currentHash = window.location.hash.replace('#', '');
+    if (currentHash) {
+      const targetSection = document.getElementById(currentHash);
+      if (targetSection && targetSection.classList.contains('content-section')) {
+        switchTab(currentHash, false);
+      }
+    } else {
+      switchTab('tab-overview', false);
+    }
+  });
 }
+
+function switchTab(targetId, shouldScroll = true) {
+  const tabButtons = document.querySelectorAll('.nav-tab-btn');
+  const sections = document.querySelectorAll('.content-section');
+
+  let activeBtn = null;
+  tabButtons.forEach(btn => {
+    if (btn.getAttribute('data-tab') === targetId) {
+      btn.classList.add('active');
+      activeBtn = btn;
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+
+  let activeSection = null;
+  sections.forEach(sec => {
+    if (sec.id === targetId) {
+      sec.classList.add('active');
+      activeSection = sec;
+    } else {
+      sec.classList.remove('active');
+    }
+  });
+
+  if (activeBtn) {
+    activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
+  }
+
+  // Update URL hash cleanly
+  if (window.location.hash.replace('#', '') !== targetId) {
+    if (history.pushState) {
+      history.pushState(null, null, '#' + targetId);
+    } else {
+      window.location.hash = targetId;
+    }
+  }
+
+  if (shouldScroll && activeSection) {
+    const container = document.getElementById('main-content');
+    if (container) {
+      const topPos = container.getBoundingClientRect().top + window.pageYOffset - 75;
+      window.scrollTo({ top: Math.max(0, topPos), behavior: 'smooth' });
+    }
+  }
+}
+window.switchTab = switchTab;
 
 // ==========================================
 // Accordions (Expand / Collapse)

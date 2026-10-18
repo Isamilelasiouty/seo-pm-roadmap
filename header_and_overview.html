@@ -13,8 +13,10 @@
       <button class="nav-tab-btn active" data-tab="tab-overview" role="tab">Orientation</button>
       <button class="nav-tab-btn" data-tab="tab-roadmap" role="tab">12-Week Roadmap</button>
       <button class="nav-tab-btn" data-tab="tab-competencies" role="tab">7 Competencies</button>
-      <button class="nav-tab-btn" data-tab="tab-capstone" role="tab">AI Capstone (MVP)</button>
+      <button class="nav-tab-btn" data-tab="tab-articles" role="tab">Masterclass Articles</button>
       <button class="nav-tab-btn" data-tab="tab-videos" role="tab">Video Masterclasses</button>
+      <button class="nav-tab-btn" data-tab="tab-books" role="tab">Ranked PM Books</button>
+      <button class="nav-tab-btn" data-tab="tab-capstone" role="tab">AI Capstone (MVP)</button>
       <button class="nav-tab-btn" data-tab="tab-resources" role="tab">Verified Resources</button>
       <button class="nav-tab-btn" data-tab="tab-english" role="tab">Professional English</button>
       <button class="nav-tab-btn" data-tab="tab-dashboard" role="tab">Learning Log &amp; Notes</button>
@@ -32,106 +34,108 @@
   </div>
 </header>
 
-<div class="app-container">
+<div class="app-container" id="main-content">
 
-  <!-- Hero Section -->
-  <section class="hero-card">
-    <div class="badge-row">
-      <span class="badge badge-mint">12-Week Career Accelerator</span>
-      <span class="badge badge-outline">SEO Strategist to Product Manager</span>
-      <span class="badge badge-mint">AI Diagnostic Assistant MVP</span>
-      <span class="badge badge-outline">5 to 7 Hours / Week</span>
-    </div>
-    
-    <h1 class="hero-title">SEO to Product Management: The Dual-Competency Roadmap</h1>
-    <p class="hero-desc">
-      A structured, evidence-based instructional framework designed to elevate your technical SEO diagnostics into strategic product leadership. Master the 7 shared competencies, build a validated AI-powered SEO diagnostic MVP, and assemble a portfolio that proves your analytical problem-solving to senior product teams.
-    </p>
-    
-    <!-- Profile Alignment Box -->
-    <div class="profile-box">
-      <div class="profile-item">
-        <div class="profile-label">Learner Profile</div>
-        <div class="profile-value">2 Years SEO Experience, GSC Practitioner, Analytical Thinker</div>
-      </div>
-      <div class="profile-item">
-        <div class="profile-label">Target AI Product</div>
-        <div class="profile-value">Search Console Root-Cause Diagnostic &amp; Pattern Assistant</div>
-      </div>
-      <div class="profile-item">
-        <div class="profile-label">Dual Objective</div>
-        <div class="profile-value">Excel in Senior SEO while systematically preparing for PM transition</div>
-      </div>
-      <div class="profile-item">
-        <div class="profile-label">Realistic Study Load</div>
-        <div class="profile-value">12 Weeks | 5 to 7 Hours Weekly | 4 Progressive Phases</div>
-      </div>
-    </div>
-    
-    <!-- Top Global Metrics -->
-    <div class="metrics-grid">
-      <div class="metric-card">
-        <div class="metric-header">
-          <span class="metric-name">Overall Completion</span>
-        </div>
-        <div class="metric-val" id="global-progress-percent">0%</div>
-        <div class="progress-track">
-          <div class="progress-fill" id="global-progress-fill"></div>
-        </div>
-        <div class="metric-sub" id="global-progress-ratio">0 of 48 Tasks Completed</div>
-      </div>
-      
-      <div class="metric-card">
-        <div class="metric-header">
-          <span class="metric-name">Portfolio Artifacts</span>
-        </div>
-        <div class="metric-val" id="artifacts-completed-count">0 / 12</div>
-        <div class="progress-track">
-          <div class="progress-fill" id="artifacts-progress-fill"></div>
-        </div>
-        <div class="metric-sub">Verified Portfolio Proofs</div>
-      </div>
-      
-      <div class="metric-card">
-        <div class="metric-header">
-          <span class="metric-name">Study Time Logged</span>
-        </div>
-        <div class="metric-val" id="hours-logged-display">0.0 hrs</div>
-        <div class="progress-track">
-          <div class="progress-fill" id="hours-progress-fill" style="width: 0%;"></div>
-        </div>
-        <div class="metric-sub">Target: ~72 Hours Total</div>
-      </div>
-      
-      <div class="metric-card">
-        <div class="metric-header">
-          <span class="metric-name">Current Milestone</span>
-        </div>
-        <div class="metric-val" style="font-size: 1.25rem; padding-top: 4px;" id="current-phase-display">Phase 1: Discovery</div>
-        <div class="metric-sub">Weeks 1 to 3: Diagnostic Rigor</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quick Action Toolbar -->
-  <div class="action-toolbar">
-    <div class="toolbar-left">
-      <button class="btn btn-outline btn-sm" id="btn-expand-all">Expand All Lessons</button>
-      <button class="btn btn-outline btn-sm" id="btn-collapse-all">Collapse All</button>
-      <button class="btn btn-outline btn-sm" id="btn-export-data">Export Notes &amp; Progress (JSON)</button>
-      <button class="btn btn-outline btn-sm" id="btn-print-view">Print / Save as PDF</button>
-    </div>
-    <div class="toolbar-right">
-      <span id="storage-status-indicator" style="font-size: 0.78rem; color: var(--text-light); font-weight: 600;">
-        Browser Storage Active
-      </span>
-      <button class="btn btn-danger-outline btn-sm" id="btn-reset-modal">Reset Progress</button>
-    </div>
-  </div>
-
-  <!-- TAB 1: ORIENTATION & METHODOLOGY -->
+  <!-- TAB 1: ORIENTATION & OVERVIEW -->
   <section id="tab-overview" class="content-section active">
-    <div class="section-head">
+
+    <!-- Hero Section -->
+    <div class="hero-card">
+      <div class="badge-row">
+        <span class="badge badge-mint">12-Week Career Accelerator</span>
+        <span class="badge badge-outline">SEO Strategist to Product Manager</span>
+        <span class="badge badge-mint">AI Diagnostic Assistant MVP</span>
+        <span class="badge badge-outline">5 to 7 Hours / Week</span>
+      </div>
+      
+      <h1 class="hero-title">SEO to Product Management: The Dual-Competency Roadmap</h1>
+      <p class="hero-desc">
+        A structured, evidence-based instructional framework designed to elevate your technical SEO diagnostics into strategic product leadership. Master the 7 shared competencies, build a validated AI-powered SEO diagnostic MVP, and assemble a portfolio that proves your analytical problem-solving to senior product teams.
+      </p>
+      
+      <!-- Profile Alignment Box -->
+      <div class="profile-box">
+        <div class="profile-item">
+          <div class="profile-label">Learner Profile</div>
+          <div class="profile-value">2 Years SEO Experience, GSC Practitioner, Analytical Thinker</div>
+        </div>
+        <div class="profile-item">
+          <div class="profile-label">Target AI Product</div>
+          <div class="profile-value">Search Console Root-Cause Diagnostic &amp; Pattern Assistant</div>
+        </div>
+        <div class="profile-item">
+          <div class="profile-label">Dual Objective</div>
+          <div class="profile-value">Excel in Senior SEO while systematically preparing for PM transition</div>
+        </div>
+        <div class="profile-item">
+          <div class="profile-label">Realistic Study Load</div>
+          <div class="profile-value">12 Weeks | 5 to 7 Hours Weekly | 4 Progressive Phases</div>
+        </div>
+      </div>
+      
+      <!-- Top Global Metrics -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-header">
+            <span class="metric-name">Overall Completion</span>
+          </div>
+          <div class="metric-val" id="global-progress-percent">0%</div>
+          <div class="progress-track">
+            <div class="progress-fill" id="global-progress-fill"></div>
+          </div>
+          <div class="metric-sub" id="global-progress-ratio">0 of 48 Tasks Completed</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-header">
+            <span class="metric-name">Portfolio Artifacts</span>
+          </div>
+          <div class="metric-val" id="artifacts-completed-count">0 / 12</div>
+          <div class="progress-track">
+            <div class="progress-fill" id="artifacts-progress-fill"></div>
+          </div>
+          <div class="metric-sub">Verified Portfolio Proofs</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-header">
+            <span class="metric-name">Study Time Logged</span>
+          </div>
+          <div class="metric-val" id="hours-logged-display">0.0 hrs</div>
+          <div class="progress-track">
+            <div class="progress-fill" id="hours-progress-fill" style="width: 0%;"></div>
+          </div>
+          <div class="metric-sub">Target: ~72 Hours Total</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-header">
+            <span class="metric-name">Current Milestone</span>
+          </div>
+          <div class="metric-val" style="font-size: 1.25rem; padding-top: 4px;" id="current-phase-display">Phase 1: Discovery</div>
+          <div class="metric-sub">Weeks 1 to 3: Diagnostic Rigor</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Action Toolbar for Overview -->
+    <div class="action-toolbar" style="margin-top: 20px;">
+      <div class="toolbar-left">
+        <span style="font-size: 0.85rem; font-weight: 700; color: var(--primary-deep);">Quick Navigation:</span>
+        <button class="btn btn-outline btn-sm" onclick="switchTab('tab-roadmap')">Go to 12-Week Roadmap &rarr;</button>
+        <button class="btn btn-outline btn-sm" onclick="switchTab('tab-articles')">Read Masterclass Articles &rarr;</button>
+        <button class="btn btn-outline btn-sm" onclick="switchTab('tab-videos')">Watch Video Masterclasses &rarr;</button>
+        <button class="btn btn-outline btn-sm" onclick="switchTab('tab-books')">View Ranked PM Books &rarr;</button>
+      </div>
+      <div class="toolbar-right">
+        <span id="storage-status-indicator" style="font-size: 0.78rem; color: var(--text-light); font-weight: 600;">
+          [Active] Browser Storage Active
+        </span>
+        <button class="btn btn-danger-outline btn-sm" id="btn-reset-modal">Reset Progress</button>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top: 28px;">
       <div>
         <h2 class="section-title">Program Orientation &amp; Mentorship Framework</h2>
         <p class="section-lead">Instructional principles, prerequisite relationships, weekly routine, and career realities.</p>

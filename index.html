@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SEO to Product Management: The Dual-Competency Learning Roadmap &amp; AI Diagnostic Tool</title>
-  <meta name="description" content="A comprehensive, interactive 12-week roadmap for SEO professionals transitioning into Product Management. Master 7 core competencies and build an AI-powered SEO diagnostic assistant.">
+  <meta name="description" content="A comprehensive, interactive 12-week roadmap for SEO professionals transitioning into Product Management. Master 7 core competencies, read masterclass articles, study ranked PM books, and build an AI-powered SEO diagnostic assistant.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
 :root {
   /* Color Palette - Clean Professional White, Forest & Mint Design System */
@@ -46,8 +46,8 @@
   --radius-lg: 14px;
   --radius-xl: 18px;
   
-  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  --font-main: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 /* Base & Global Styles */
@@ -181,6 +181,8 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--mint-pill);
   color: var(--primary-deep);
   border-color: var(--mint-border);
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(6, 78, 59, 0.12);
 }
 
 /* Quick Metrics in Nav */
@@ -1264,6 +1266,183 @@ h1, h2, h3, h4, h5, h6 {
   gap: 12px;
 }
 
+/* Articles Layout */
+.articles-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.article-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--mint-border);
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.article-heading {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary-deep);
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.article-author {
+  font-size: 0.85rem;
+  color: var(--primary-medium);
+  font-weight: 600;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.article-body {
+  font-size: 0.92rem;
+  color: var(--text-main);
+  line-height: 1.75;
+}
+
+.article-body p {
+  margin-bottom: 14px;
+}
+
+.article-body h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+  margin: 18px 0 8px 0;
+}
+
+.article-body ul, .article-body ol {
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+
+.article-body li {
+  margin-bottom: 8px;
+}
+
+.article-takeaway {
+  margin-top: 20px;
+  padding: 14px 18px;
+  background: var(--mint-card);
+  border-left: 4px solid var(--primary-medium);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  color: var(--primary-deep);
+}
+
+/* Books Grid */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 22px;
+}
+
+.book-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-emerald);
+}
+
+.book-card.rank-top {
+  border-top: 4px solid var(--primary-medium);
+}
+
+.book-card.rank-high {
+  border-top: 4px solid var(--accent-emerald);
+}
+
+.book-rank-badge {
+  display: inline-block;
+  background: var(--mint-pill);
+  color: var(--mint-text);
+  font-size: 0.76rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.book-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary-deep);
+  line-height: 1.35;
+  margin-bottom: 4px;
+}
+
+.book-author {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.book-category {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--primary-medium);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.book-summary {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.book-bridge-box {
+  background: var(--bg-subtle);
+  border-left: 3px solid var(--mint-border);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.84rem;
+  color: var(--text-main);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.book-roadmap-link {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  border-top: 1px solid var(--border-light);
+  padding-top: 10px;
+}
+
 /* Print Styles */
 @media print {
   .sticky-header,
@@ -1315,8 +1494,10 @@ h1, h2, h3, h4, h5, h6 {
       <button class="nav-tab-btn active" data-tab="tab-overview" role="tab">Orientation</button>
       <button class="nav-tab-btn" data-tab="tab-roadmap" role="tab">12-Week Roadmap</button>
       <button class="nav-tab-btn" data-tab="tab-competencies" role="tab">7 Competencies</button>
-      <button class="nav-tab-btn" data-tab="tab-capstone" role="tab">AI Capstone (MVP)</button>
+      <button class="nav-tab-btn" data-tab="tab-articles" role="tab">Masterclass Articles</button>
       <button class="nav-tab-btn" data-tab="tab-videos" role="tab">Video Masterclasses</button>
+      <button class="nav-tab-btn" data-tab="tab-books" role="tab">Ranked PM Books</button>
+      <button class="nav-tab-btn" data-tab="tab-capstone" role="tab">AI Capstone (MVP)</button>
       <button class="nav-tab-btn" data-tab="tab-resources" role="tab">Verified Resources</button>
       <button class="nav-tab-btn" data-tab="tab-english" role="tab">Professional English</button>
       <button class="nav-tab-btn" data-tab="tab-dashboard" role="tab">Learning Log &amp; Notes</button>
@@ -1334,106 +1515,108 @@ h1, h2, h3, h4, h5, h6 {
   </div>
 </header>
 
-<div class="app-container">
+<div class="app-container" id="main-content">
 
-  <!-- Hero Section -->
-  <section class="hero-card">
-    <div class="badge-row">
-      <span class="badge badge-mint">12-Week Career Accelerator</span>
-      <span class="badge badge-outline">SEO Strategist to Product Manager</span>
-      <span class="badge badge-mint">AI Diagnostic Assistant MVP</span>
-      <span class="badge badge-outline">5 to 7 Hours / Week</span>
-    </div>
-    
-    <h1 class="hero-title">SEO to Product Management: The Dual-Competency Roadmap</h1>
-    <p class="hero-desc">
-      A structured, evidence-based instructional framework designed to elevate your technical SEO diagnostics into strategic product leadership. Master the 7 shared competencies, build a validated AI-powered SEO diagnostic MVP, and assemble a portfolio that proves your analytical problem-solving to senior product teams.
-    </p>
-    
-    <!-- Profile Alignment Box -->
-    <div class="profile-box">
-      <div class="profile-item">
-        <div class="profile-label">Learner Profile</div>
-        <div class="profile-value">2 Years SEO Experience, GSC Practitioner, Analytical Thinker</div>
-      </div>
-      <div class="profile-item">
-        <div class="profile-label">Target AI Product</div>
-        <div class="profile-value">Search Console Root-Cause Diagnostic &amp; Pattern Assistant</div>
-      </div>
-      <div class="profile-item">
-        <div class="profile-label">Dual Objective</div>
-        <div class="profile-value">Excel in Senior SEO while systematically preparing for PM transition</div>
-      </div>
-      <div class="profile-item">
-        <div class="profile-label">Realistic Study Load</div>
-        <div class="profile-value">12 Weeks | 5 to 7 Hours Weekly | 4 Progressive Phases</div>
-      </div>
-    </div>
-    
-    <!-- Top Global Metrics -->
-    <div class="metrics-grid">
-      <div class="metric-card">
-        <div class="metric-header">
-          <span class="metric-name">Overall Completion</span>
-        </div>
-        <div class="metric-val" id="global-progress-percent">0%</div>
-        <div class="progress-track">
-          <div class="progress-fill" id="global-progress-fill"></div>
-        </div>
-        <div class="metric-sub" id="global-progress-ratio">0 of 48 Tasks Completed</div>
-      </div>
-      
-      <div class="metric-card">
-        <div class="metric-header">
-          <span class="metric-name">Portfolio Artifacts</span>
-        </div>
-        <div class="metric-val" id="artifacts-completed-count">0 / 12</div>
-        <div class="progress-track">
-          <div class="progress-fill" id="artifacts-progress-fill"></div>
-        </div>
-        <div class="metric-sub">Verified Portfolio Proofs</div>
-      </div>
-      
-      <div class="metric-card">
-        <div class="metric-header">
-          <span class="metric-name">Study Time Logged</span>
-        </div>
-        <div class="metric-val" id="hours-logged-display">0.0 hrs</div>
-        <div class="progress-track">
-          <div class="progress-fill" id="hours-progress-fill" style="width: 0%;"></div>
-        </div>
-        <div class="metric-sub">Target: ~72 Hours Total</div>
-      </div>
-      
-      <div class="metric-card">
-        <div class="metric-header">
-          <span class="metric-name">Current Milestone</span>
-        </div>
-        <div class="metric-val" style="font-size: 1.25rem; padding-top: 4px;" id="current-phase-display">Phase 1: Discovery</div>
-        <div class="metric-sub">Weeks 1 to 3: Diagnostic Rigor</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quick Action Toolbar -->
-  <div class="action-toolbar">
-    <div class="toolbar-left">
-      <button class="btn btn-outline btn-sm" id="btn-expand-all">Expand All Lessons</button>
-      <button class="btn btn-outline btn-sm" id="btn-collapse-all">Collapse All</button>
-      <button class="btn btn-outline btn-sm" id="btn-export-data">Export Notes &amp; Progress (JSON)</button>
-      <button class="btn btn-outline btn-sm" id="btn-print-view">Print / Save as PDF</button>
-    </div>
-    <div class="toolbar-right">
-      <span id="storage-status-indicator" style="font-size: 0.78rem; color: var(--text-light); font-weight: 600;">
-        Browser Storage Active
-      </span>
-      <button class="btn btn-danger-outline btn-sm" id="btn-reset-modal">Reset Progress</button>
-    </div>
-  </div>
-
-  <!-- TAB 1: ORIENTATION & METHODOLOGY -->
+  <!-- TAB 1: ORIENTATION & OVERVIEW -->
   <section id="tab-overview" class="content-section active">
-    <div class="section-head">
+
+    <!-- Hero Section -->
+    <div class="hero-card">
+      <div class="badge-row">
+        <span class="badge badge-mint">12-Week Career Accelerator</span>
+        <span class="badge badge-outline">SEO Strategist to Product Manager</span>
+        <span class="badge badge-mint">AI Diagnostic Assistant MVP</span>
+        <span class="badge badge-outline">5 to 7 Hours / Week</span>
+      </div>
+      
+      <h1 class="hero-title">SEO to Product Management: The Dual-Competency Roadmap</h1>
+      <p class="hero-desc">
+        A structured, evidence-based instructional framework designed to elevate your technical SEO diagnostics into strategic product leadership. Master the 7 shared competencies, build a validated AI-powered SEO diagnostic MVP, and assemble a portfolio that proves your analytical problem-solving to senior product teams.
+      </p>
+      
+      <!-- Profile Alignment Box -->
+      <div class="profile-box">
+        <div class="profile-item">
+          <div class="profile-label">Learner Profile</div>
+          <div class="profile-value">2 Years SEO Experience, GSC Practitioner, Analytical Thinker</div>
+        </div>
+        <div class="profile-item">
+          <div class="profile-label">Target AI Product</div>
+          <div class="profile-value">Search Console Root-Cause Diagnostic &amp; Pattern Assistant</div>
+        </div>
+        <div class="profile-item">
+          <div class="profile-label">Dual Objective</div>
+          <div class="profile-value">Excel in Senior SEO while systematically preparing for PM transition</div>
+        </div>
+        <div class="profile-item">
+          <div class="profile-label">Realistic Study Load</div>
+          <div class="profile-value">12 Weeks | 5 to 7 Hours Weekly | 4 Progressive Phases</div>
+        </div>
+      </div>
+      
+      <!-- Top Global Metrics -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-header">
+            <span class="metric-name">Overall Completion</span>
+          </div>
+          <div class="metric-val" id="global-progress-percent">0%</div>
+          <div class="progress-track">
+            <div class="progress-fill" id="global-progress-fill"></div>
+          </div>
+          <div class="metric-sub" id="global-progress-ratio">0 of 48 Tasks Completed</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-header">
+            <span class="metric-name">Portfolio Artifacts</span>
+          </div>
+          <div class="metric-val" id="artifacts-completed-count">0 / 12</div>
+          <div class="progress-track">
+            <div class="progress-fill" id="artifacts-progress-fill"></div>
+          </div>
+          <div class="metric-sub">Verified Portfolio Proofs</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-header">
+            <span class="metric-name">Study Time Logged</span>
+          </div>
+          <div class="metric-val" id="hours-logged-display">0.0 hrs</div>
+          <div class="progress-track">
+            <div class="progress-fill" id="hours-progress-fill" style="width: 0%;"></div>
+          </div>
+          <div class="metric-sub">Target: ~72 Hours Total</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-header">
+            <span class="metric-name">Current Milestone</span>
+          </div>
+          <div class="metric-val" style="font-size: 1.25rem; padding-top: 4px;" id="current-phase-display">Phase 1: Discovery</div>
+          <div class="metric-sub">Weeks 1 to 3: Diagnostic Rigor</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Action Toolbar for Overview -->
+    <div class="action-toolbar" style="margin-top: 20px;">
+      <div class="toolbar-left">
+        <span style="font-size: 0.85rem; font-weight: 700; color: var(--primary-deep);">Quick Navigation:</span>
+        <button class="btn btn-outline btn-sm" onclick="switchTab('tab-roadmap')">Go to 12-Week Roadmap &rarr;</button>
+        <button class="btn btn-outline btn-sm" onclick="switchTab('tab-articles')">Read Masterclass Articles &rarr;</button>
+        <button class="btn btn-outline btn-sm" onclick="switchTab('tab-videos')">Watch Video Masterclasses &rarr;</button>
+        <button class="btn btn-outline btn-sm" onclick="switchTab('tab-books')">View Ranked PM Books &rarr;</button>
+      </div>
+      <div class="toolbar-right">
+        <span id="storage-status-indicator" style="font-size: 0.78rem; color: var(--text-light); font-weight: 600;">
+          [Active] Browser Storage Active
+        </span>
+        <button class="btn btn-danger-outline btn-sm" id="btn-reset-modal">Reset Progress</button>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top: 28px;">
       <div>
         <h2 class="section-title">Program Orientation &amp; Mentorship Framework</h2>
         <p class="section-lead">Instructional principles, prerequisite relationships, weekly routine, and career realities.</p>
@@ -1590,6 +1773,19 @@ h1, h2, h3, h4, h5, h6 {
     </div>
     <div style="font-size: 0.85rem; color: var(--text-light); font-weight: 600;">
       Phase 1 to 4 | 48 Actionable Milestones
+    </div>
+  <!-- Roadmap Action Toolbar -->
+  <div class="action-toolbar" style="margin-bottom: 20px;">
+    <div class="toolbar-left">
+      <button class="btn btn-outline btn-sm" id="btn-expand-all">Expand All Lessons</button>
+      <button class="btn btn-outline btn-sm" id="btn-collapse-all">Collapse All</button>
+      <button class="btn btn-outline btn-sm" id="btn-export-data">Export Notes &amp; Progress (JSON)</button>
+      <button class="btn btn-outline btn-sm" id="btn-print-view">Print / Save as PDF</button>
+    </div>
+    <div class="toolbar-right">
+      <span style="font-size: 0.8rem; color: var(--primary-deep); font-weight: 700;">
+        Pace: 5 to 7 hrs/week
+      </span>
     </div>
   </div>
 
@@ -3476,6 +3672,838 @@ h1, h2, h3, h4, h5, h6 {
   </div>
 </section>
 
+<!-- TAB: MASTERCLASS ARTICLES & IN-DEPTH STUDY GUIDES -->
+<section id="tab-articles" class="content-section">
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">Masterclass Articles &amp; In-Depth Study Guides</h2>
+      <p class="section-lead">Comprehensive, practical guides written to bridge technical SEO diagnostics, product thinking, and data-driven execution.</p>
+    </div>
+    <div style="font-size: 0.85rem; color: var(--text-light); font-weight: 600;">
+      7 Masterclass Guides
+    </div>
+  </div>
+
+  <div class="articles-layout">
+
+    <!-- ARTICLE 1 -->
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="res-pill pill-tier1">Diagnostic Protocol</span>
+        <span class="res-pill pill-format">Core Guide</span>
+        <span class="res-meta-time">Read Time: 12 mins</span>
+      </div>
+      <h3 class="article-heading">1. The Root-Cause Diagnostic Protocol: Investigating Search Traffic Drops Like a Growth PM</h3>
+      <div class="article-author">Bridge: Competency 1 (Data Analysis) &amp; Search Console Triangulation</div>
+      <div class="article-body">
+        <p>
+          When organic search traffic drops, junior SEOs often panic and begin making random, unvalidated changes: modifying title tags, disavowing backlinks, or requesting urgent content rewrites. In contrast, a Product Manager treats a traffic drop not as a catastrophe, but as an <strong>unexplained system anomaly</strong> that demands methodical diagnostic isolation.
+        </p>
+        
+        <h4>Step 1: Classify the Drop Geometry</h4>
+        <p>
+          As documented by Google Search Advocate Daniel Waisberg, the visual shape of a traffic drop on a time-series graph provides immediate clues regarding the underlying mechanism:
+        </p>
+        <ul>
+          <li><strong>The Cliff (Vertical Precipice Drop):</strong> Traffic falls by 50% or more overnight within 24 to 48 hours. This shape almost never indicates content fatigue or gradual competitor erosion. It indicates a binary technical failure: robots.txt blocking crawling, an errant site-wide <code>noindex</code> tag injected during a deployment, server-side 5xx error spikes, DNS failures, or a severe manual security action in Search Console.</li>
+          <li><strong>The Slope (Gradual Persistent Erosion):</strong> Traffic steadily declines over 3 to 9 months across consecutive quarters. This reflects shifting user search demand, seasonal macro cycles, continuous competitor content investments, or slow algorithmic obsolescence where user satisfaction metrics on your pages lag behind competitors.</li>
+          <li><strong>The Step (Immediate Plateau Downward):</strong> Traffic drops sharply on a specific date, stabilizes at a new lower plateau, and flatlines. This is the classic signature of a Google Core Algorithm Update or a SERP feature displacement (such as Google deploying AI Overviews or prominent knowledge panels above traditional organic listings).</li>
+        </ul>
+
+        <h4>Step 2: Isolate the Blast Radius (Segmentation)</h4>
+        <p>
+          Never analyze performance at the blended site-wide aggregate level. Blended metrics conceal the truth:
+        </p>
+        <ul>
+          <li><strong>Segment by Page Template / URL Directory:</strong> Did the drop affect the entire domain evenly, or is it isolated to <code>/blog/</code> while <code>/products/</code> remains stable? If it is isolated to informational articles, site-wide technical health is healthy, and the issue is query intent or content relevance.</li>
+          <li><strong>Segment by Query Intent (Branded vs. Non-Branded):</strong> If branded queries declined, the problem is brand demand and marketing awareness, not an SEO technical penalty. If non-branded queries declined while average position remained unchanged, click-through rates fell due to SERP layout changes.</li>
+          <li><strong>Cross-Validate with Device &amp; Geography:</strong> Compare Mobile vs. Desktop and primary market countries. A drop isolated entirely to Mobile often signals mobile Core Web Vitals degradation (INP spikes or CLS shifts).</li>
+        </ul>
+
+        <h4>Step 3: Triangulate Search Console with Analytics Data</h4>
+        <p>
+          Search Console data represents <em>pre-click search visibility</em> (demand and rankings). Google Analytics 4 represents <em>post-click user engagement</em> (behavior and conversion). If Search Console impressions and average positions are steady but GA4 sessions collapsed, check your analytics tag firing or cookie consent banner updates before touching any SEO tags.
+        </p>
+
+        <div class="article-takeaway">
+          <strong>Key PM Takeaway:</strong> A professional diagnostic report never concludes with "rankings dropped, let's rewrite articles." It specifies: (1) Confirmed Observations, (2) Ruled-Out Hypotheses with evidence, (3) Likely Root Causes, and (4) Measured Test Interventions.
+        </div>
+      </div>
+    </article>
+
+    <!-- ARTICLE 2 -->
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="res-pill pill-tier1">User Research</span>
+        <span class="res-pill pill-format">Discovery Guide</span>
+        <span class="res-meta-time">10 mins</span>
+      </div>
+      <h3 class="article-heading">2. From Keyword Volumes to Jobs-to-be-Done: Unlocking True Customer Motivation</h3>
+      <div class="article-author">Bridge: Competency 2 (User Research) &amp; Search Intent Modeling</div>
+      <div class="article-body">
+        <p>
+          Traditional SEO treats keywords as mathematical strings with search volume and keyword difficulty scores. Product Management treats search queries as <strong>behavioral confessions</strong>: raw, unfiltered expressions of human friction, anxiety, and unfinished goals.
+        </p>
+        
+        <h4>The Flaw of Superficial Intent Categorization</h4>
+        <p>
+          Most SEO tools categorize intent into four rigid buckets: Informational, Navigational, Commercial, and Transactional. While helpful as an initial filter, this taxonomy fails to explain <em>why</em> a user chose that exact wording and what specific progress they are attempting to make.
+        </p>
+        <p>
+          Consider the query: <code>best enterprise project management software</code>.
+        </p>
+        <ul>
+          <li><strong>The Superficial SEO View:</strong> "Commercial investigation query with 4,200 monthly volume. We must write a 3,000-word listicle comparing 15 tools."</li>
+          <li><strong>The Jobs-to-be-Done (JTBD) Product View:</strong> As taught by Professor Clayton Christensen, the user is not shopping for software features. The user is a newly promoted Operations Manager who is terrified that cross-team deadlines will slip. Their job is: <em>"When I manage distributed engineering teams, I want a single source of truth for project blockers, so that I can prevent project delays without micromanaging my team in daily status meetings."</em></li>
+        </ul>
+
+        <h4>How to Conduct Discovery Interviews for SEO &amp; Product</h4>
+        <p>
+          To design solutions that genuinely satisfy user intent, you must speak directly with users. Apply Rob Fitzpatrick’s "The Mom Test" rules:
+        </p>
+        <ol>
+          <li><strong>Talk About Their Life, Not Your Solution:</strong> Never ask: "Would you like an AI tool that analyzes Search Console?" The user will politely say yes, giving you false validation. Instead, ask: "Walk me through the last time your search traffic dropped. What was the very first tool you opened? What frustrated you about the data?"</li>
+          <li><strong>Ask About Specific Past Behavior, Not Hypotheticals:</strong> People are terrible at predicting their future actions. Ask: "When did you last do this? How much time did it take? What workarounds did you build in spreadsheets?"</li>
+          <li><strong>Listen for the Emotion Behind Friction:</strong> When an interviewee sighs, pauses, or expresses frustration ("I spent 6 hours manually matching URLs and still couldn't find the pattern"), you have struck gold. That friction represents an unserved Job-to-be-Done.</li>
+        </ol>
+
+        <div class="article-takeaway">
+          <strong>Key PM Takeaway:</strong> When your product and landing page address the underlying emotional and functional Job-to-be-Done rather than just echoing surface keywords, conversion rates increase and bounce rates plummet.
+        </div>
+      </div>
+    </article>
+
+    <!-- ARTICLE 3 -->
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="res-pill pill-tier1">Strategic Prioritization</span>
+        <span class="res-pill pill-format">Execution Guide</span>
+        <span class="res-meta-time">14 mins</span>
+      </div>
+      <h3 class="article-heading">3. The Prioritization Playbook: Defending Roadmap Trade-offs with RICE &amp; MoSCoW</h3>
+      <div class="article-author">Bridge: Competency 3 (Prioritization) &amp; Engineering Backlogs</div>
+      <div class="article-body">
+        <p>
+          The most critical difference between an individual contributor and a strategic Product Manager is the ability to say <strong>"No"</strong> with objective, quantitative justification. In any website or software project, you will face an infinite list of good ideas and a strictly finite supply of engineering hours.
+        </p>
+
+        <h4>The RICE Scoring Model Dissected</h4>
+        <p>
+          Developed by Sean McBride at Intercom, RICE is the gold standard for ranking competing initiatives:
+        </p>
+        <div style="background: var(--bg-subtle); padding: 14px 18px; border-left: 3px solid var(--accent-emerald); border-radius: var(--radius-sm); margin: 12px 0; font-family: var(--font-mono); font-size: 0.95rem;">
+          RICE Score = (Reach × Impact × Confidence) ÷ Effort
+        </div>
+        <ul>
+          <li><strong>Reach (Users per Timeframe):</strong> The estimated number of users or sessions impacted over a set window (e.g., 50,000 monthly organic landing page visitors).</li>
+          <li><strong>Impact (Contribution to Goal):</strong> A standardized multiplier: 3 = Massive Impact, 2 = High Impact, 1 = Medium Impact, 0.5 = Low Impact, 0.25 = Minimal Impact.</li>
+          <li><strong>Confidence (Mitigating Wishful Thinking):</strong> The percentage of certainty backed by evidence: 100% = High Confidence (backed by user interview data and analytics), 80% = Medium Confidence (supported by qualitative feedback), 50% = Low Confidence (an intuitive hunch or competitor imitation). Low confidence severely penalizes optimistic projections.</li>
+          <li><strong>Effort (Person-Weeks):</strong> Total time required across engineering, design, and content (e.g., 2 developer weeks = 2.0).</li>
+        </ul>
+
+        <h4>MoSCoW Scoping: Defining the Uncompromising MVP</h4>
+        <p>
+          When building version 1.0 of your AI SEO Diagnostic tool, you must ruthlessly define your scope boundaries:
+        </p>
+        <ul>
+          <li><strong>Must-Have (M):</strong> Features without which the tool is non-functional. (e.g., CSV upload parsing, anomaly detection heuristic, basic root-cause report).</li>
+          <li><strong>Should-Have (S):</strong> High-value enhancements scheduled for version 1.1 once core utility is proven. (e.g., automated email alerts, PDF export).</li>
+          <li><strong>Could-Have (C):</strong> Desirable additions with small impact. (e.g., custom dark mode UI theme).</li>
+          <li><strong>Won't-Have This Time (W):</strong> Features explicitly excluded to protect delivery timelines. (e.g., direct OAuth Search Console API sync, full crawler integration).</li>
+        </ul>
+
+        <div class="article-takeaway">
+          <strong>Key PM Takeaway:</strong> Prioritization is not about choosing between good ideas and bad ideas. It is about choosing which <em>good ideas</em> to kill or delay so that your <em>highest-leverage idea</em> can succeed.
+        </div>
+      </div>
+    </article>
+
+    <!-- ARTICLE 4 -->
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="res-pill pill-tier1">Product Analytics</span>
+        <span class="res-pill pill-format">Measurement Guide</span>
+        <span class="res-meta-time">11 mins</span>
+      </div>
+      <h3 class="article-heading">4. Architecting Metric Trees &amp; The North Star: Beyond Vanity SEO Rankings</h3>
+      <div class="article-author">Bridge: Competency 4 (Metrics &amp; KPIs) &amp; Customer Retention</div>
+      <div class="article-body">
+        <p>
+          In traditional SEO reporting, practitioners frequently celebrate "vanity metrics": ranking for 100 keywords, generating 1,000,000 impressions, or publishing 40 blog posts. In Product Management, outputs (things you built or published) mean nothing if they do not drive <strong>outcomes</strong> (measurable changes in user behavior and sustainable business value).
+        </p>
+
+        <h4>The North Star Metric (NSM) Framework</h4>
+        <p>
+          As detailed in Amplitude’s North Star Playbook, a North Star Metric is the single key metric that best captures the core customer value delivered by your product.
+        </p>
+        <p>
+          For your AI SEO Diagnostic Assistant:
+        </p>
+        <ul>
+          <li><strong>Bad North Star Metric:</strong> "Total Registered Users" (A vanity acquisition metric. Users can register once, find zero value, and never return).</li>
+          <li><strong>Weak North Star Metric:</strong> "Total CSV Files Uploaded" (An activity metric. The user uploaded a file, but did they get a useful diagnosis?).</li>
+          <li><strong>True North Star Metric:</strong> <strong>"Weekly Resolved Diagnoses"</strong> (The number of times a user reviewed an automated diagnostic report, clicked 'Accept Action Plan', and implemented the recommended fix).</li>
+        </ul>
+
+        <h4>Constructing the KPI Tree (Leading vs. Lagging Indicators)</h4>
+        <p>
+          Revenue and monthly organic search traffic are <strong>lagging indicators</strong>: by the time they drop, the failure occurred weeks or months earlier. You must manage through <strong>leading input indicators</strong>:
+        </p>
+        <ul>
+          <li><strong>Leading Indicator (Input):</strong> Time-to-First-Diagnosis (&lt;60 seconds), Diagnostic Accuracy Rating (4.5/5 by users), Percentage of recommendations accepted.</li>
+          <li><strong>Mid-Funnel Indicator:</strong> Day-14 and Day-30 User Retention Cohorts. Do SEO practitioners come back every Monday morning to run their site diagnostics?</li>
+          <li><strong>Lagging Indicator (Outcome):</strong> Expansion revenue, reduced client churn, and customer lifetime value (LTV).</li>
+        </ul>
+
+        <div class="article-takeaway">
+          <strong>Key PM Takeaway:</strong> Connect every technical task to a node on your KPI tree. If an engineering initiative does not visibly move a leading input metric that supports your North Star, question why you are building it.
+        </div>
+      </div>
+    </article>
+
+    <!-- ARTICLE 5 -->
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="res-pill pill-tier1">UX &amp; CRO</span>
+        <span class="res-pill pill-format">Design Guide</span>
+        <span class="res-meta-time">13 mins</span>
+      </div>
+      <h3 class="article-heading">5. Usability Heuristics &amp; Progressive Disclosure: Designing Complex Data Tools</h3>
+      <div class="article-author">Bridge: Competency 5 (UX &amp; CRO) &amp; Interface Wireframing</div>
+      <div class="article-body">
+        <p>
+          Data-heavy software (such as SEO tools, analytics dashboards, and diagnostic portals) often suffers from extreme interface clutter. Creators dump every available data table, chart, filter, and metric onto a single screen, overwhelming the user’s cognitive working memory.
+        </p>
+
+        <h4>Steve Krug’s Core Law: Don't Make Me Think</h4>
+        <p>
+          Steve Krug’s classic principle applies universally to both web landing pages and software products: <em>every time a user has to pause and puzzle over what a button means, where their data went, or how to interpret a graph, friction accumulates</em>. When cognitive friction exceeds motivation, users bounce or abandon the tool.
+        </p>
+
+        <h4>Applying Progressive Disclosure to SEO Diagnostics</h4>
+        <p>
+          Progressive Disclosure is an interaction design pattern that presents only the most essential information first, while making secondary, advanced details accessible on demand:
+        </p>
+        <ul>
+          <li><strong>Level 1 (Executive Summary):</strong> Show the high-level diagnosis immediately: "Organic Traffic dropped by 18% due to AI Overview displacement on Informational URLs. Confidence: 92%."</li>
+          <li><strong>Level 2 (Evidence &amp; Explanations):</strong> Allow the user to expand and view the top 10 impacted query clusters and the before/after CTR curves.</li>
+          <li><strong>Level 3 (Raw Data &amp; Export):</strong> Provide full CSV access, raw query logs, and underlying SQL calculations only when requested by technical analysts.</li>
+        </ul>
+
+        <h4>Nielsen's Usability Heuristics in Action</h4>
+        <ul>
+          <li><strong>Visibility of System Status:</strong> When a user uploads a 10,000-row Search Console CSV, never leave them looking at a frozen button. Show a clear progress bar: "Parsing URLs... Detecting Anomaly Patterns... Synthesizing Report (42% Complete)."</li>
+          <li><strong>Error Prevention &amp; Graceful Recovery:</strong> If the user uploads a Google Analytics export instead of a Search Console export, do not throw an unhandled <code>TypeError: null is not an object</code>. Detect the missing headers immediately and explain: "This file appears to be a GA4 export. Please upload the 'Queries.csv' or 'Pages.csv' export from Search Console Performance report."</li>
+        </ul>
+
+        <div class="article-takeaway">
+          <strong>Key PM Takeaway:</strong> A great tool does not show off how much raw data it has; it demonstrates how quickly and effortlessly it guides a user from confusion to validated action.
+        </div>
+      </div>
+    </article>
+
+    <!-- ARTICLE 6 -->
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="res-pill pill-tier1">Experimentation</span>
+        <span class="res-pill pill-format">Scientific Guide</span>
+        <span class="res-meta-time">15 mins</span>
+      </div>
+      <h3 class="article-heading">6. Falsifiable SEO Experimentation &amp; Causal Attribution: Eliminating Noise</h3>
+      <div class="article-author">Bridge: Competency 6 (Experimentation) &amp; Statistical Thinking</div>
+      <div class="article-body">
+        <p>
+          The biggest intellectual trap in SEO is the logical fallacy known as <em>Post hoc ergo propter hoc</em> ("After this, therefore because of this"):
+        </p>
+        <div style="background: var(--bg-subtle); padding: 12px 16px; border-left: 3px solid #ef4444; border-radius: var(--radius-sm); margin: 10px 0; font-style: italic;">
+          "We updated title tags across 500 pages on October 1st. On October 15th, organic traffic rose by 15%. Therefore, our title tags caused the 15% increase."
+        </div>
+        <p>
+          This is not scientific reasoning. What if an unannounced Google algorithm shift boosted your category? What if seasonal holiday demand surged? What if a competitor’s server crashed? Without a controlled experiment, you cannot claim causal attribution.
+        </p>
+
+        <h4>How to Formulate a Falsifiable Hypothesis</h4>
+        <p>
+          A hypothesis is not a guess; it is a testable statement structured so that empirical evidence can prove it wrong:
+        </p>
+        <div style="background: var(--mint-bg); padding: 14px 18px; border: 1px solid var(--mint-border); border-radius: var(--radius-sm); margin: 12px 0;">
+          <strong>Structured Hypothesis Formula:</strong><br>
+          "Because we observed <em>[specific customer friction or data pattern]</em>,<br>
+          we believe that <em>[specific intervention or feature]</em><br>
+          will result in <em>[measurable metric outcome]</em>.<br>
+          We will know we are wrong if <em>[falsification threshold within X days]</em>."
+        </div>
+
+        <h4>Page-Cluster Split Testing for SEO</h4>
+        <p>
+          Unlike traditional user A/B testing where users are randomly served variant A or variant B via cookies, search engine crawlers index URLs. As practiced by engineering teams at Pinterest and SearchPilot, SEO split testing requires <strong>page-cluster matching</strong>:
+        </p>
+        <ul>
+          <li><strong>Cluster Selection:</strong> Select 1,000 structurally similar, templated pages (e.g., e-commerce product pages or job listing pages).</li>
+          <li><strong>Stratified Matching:</strong> Divide them into two statistically balanced groups: 500 Control pages and 500 Variant pages with matching historical traffic baselines and variance.</li>
+          <li><strong>Isolated Treatment:</strong> Deploy your change (e.g., structured product markup or refreshed meta descriptions) ONLY to the Variant group. Keep the Control group untouched.</li>
+          <li><strong>Causal Inference:</strong> If market-wide seasonal search traffic drops by 10% across the Control group, but your Variant group remains flat (0% change), your intervention generated a true net +10% lift over baseline!</li>
+        </ul>
+
+        <div class="article-takeaway">
+          <strong>Key PM Takeaway:</strong> Master the humility of the scientific method. Be more interested in finding the objective truth than in proving your personal hypothesis right.
+        </div>
+      </div>
+    </article>
+
+    <!-- ARTICLE 7 -->
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="res-pill pill-tier1">Technical Delivery</span>
+        <span class="res-pill pill-format">Collaboration Guide</span>
+        <span class="res-meta-time">13 mins</span>
+      </div>
+      <h3 class="article-heading">7. Writing Engineering-Ready PRDs: Acceptance Criteria Developers Respect</h3>
+      <div class="article-author">Bridge: Competency 7 (Technical Requirements) &amp; Agile Sprints</div>
+      <div class="article-body">
+        <p>
+          One of the greatest sources of friction between marketing/SEO teams and software engineers is ambiguity. When an SEO delivers a 40-page audit filled with vague recommendations ("Make the site faster", "Improve internal links", "Add schema"), developers push back, delay tickets, or refuse to prioritize the work.
+        </p>
+
+        <h4>The Anatomy of a High-Impact PRD (Product Requirements Document)</h4>
+        <p>
+          A great PRD does not dictate line-by-line code to engineers. It defines the <em>problem</em>, the <em>user constraints</em>, the <em>expected behavior</em>, and the <em>boundary conditions</em>:
+        </p>
+        <ol>
+          <li><strong>Executive Problem Statement:</strong> Quantify the pain point and why it matters now.</li>
+          <li><strong>Success Metrics:</strong> How will we objectively know this feature succeeded in production?</li>
+          <li><strong>User Stories with Persona &amp; Benefit:</strong> Format: <em>"As a [Persona], I want [Action], So that [Benefit]."</em></li>
+          <li><strong>Acceptance Criteria in Gherkin Syntax:</strong> Unambiguous Given/When/Then scenarios covering both the happy path and edge cases.</li>
+          <li><strong>Non-Functional Requirements (SLAs):</strong> Response latency thresholds (&lt;300ms), security rules, and data privacy limits.</li>
+          <li><strong>Definition of Done (DoD):</strong> Specific test suites that must pass before staging deployment.</li>
+        </ol>
+
+        <h4>Practical Example: Gherkin Acceptance Criteria</h4>
+        <div style="background: var(--bg-subtle); padding: 14px 18px; border-left: 3px solid var(--primary-medium); border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.88rem; line-height: 1.5; margin: 12px 0;">
+          <strong>Feature:</strong> Automated GSC Traffic Drop Anomaly Classification<br><br>
+          <strong>Scenario 1: Precipitous Drop Detection (The Cliff)</strong><br>
+          &nbsp;&nbsp;<strong>Given</strong> a website has an average baseline of 5,000 daily clicks over the last 28 days<br>
+          &nbsp;&nbsp;<strong>When</strong> daily clicks decline by &gt;50% within a 48-hour window<br>
+          &nbsp;&nbsp;<strong>And</strong> impressions also decline by &gt;50% across &gt;80% of indexed URLs<br>
+          &nbsp;&nbsp;<strong>Then</strong> the diagnostic engine MUST flag the event as "Severity Level: Critical (Precipitous Drop)"<br>
+          &nbsp;&nbsp;<strong>And</strong> prompt the user to inspect robots.txt and HTTP 5xx server logs before reviewing content updates.<br><br>
+          <strong>Scenario 2: Malformed or Incomplete CSV Upload</strong><br>
+          &nbsp;&nbsp;<strong>Given</strong> a user uploads a CSV file lacking the required "Clicks" or "Impressions" columns<br>
+          &nbsp;&nbsp;<strong>When</strong> the client-side parser validates the table headers<br>
+          &nbsp;&nbsp;<strong>Then</strong> the system MUST abort processing within 200ms<br>
+          &nbsp;&nbsp;<strong>And</strong> display an inline error toast: "Missing required column headers: Clicks, Impressions. Please download a clean Search Console performance export."
+        </div>
+
+        <div class="article-takeaway">
+          <strong>Key PM Takeaway:</strong> When you provide engineers with precise acceptance criteria and explicit edge cases, sprint velocity doubles and technical rework disappears.
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- TAB: VIDEO MASTERCLASSES -->
+<section id="tab-videos" class="content-section">
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">Video Masterclasses &amp; YouTube Training</h2>
+      <p class="section-lead">Curated, high-impact video lectures and hands-on tutorials from Google Search Central, Harvard Business School, and product leaders.</p>
+    </div>
+    <div style="font-size: 0.85rem; color: var(--text-light); font-weight: 600;">
+      7 Core Video Modules (Including Arabic PM Masterclass)
+    </div>
+  </div>
+
+  <div class="callout" style="margin-bottom: 24px;">
+    <div>
+      <strong>Interactive Video Hub:</strong> Watch the official video tutorials directly below or open them in YouTube. Each video is specifically selected to bridge search engine data analysis with product discovery, behavioral analytics, and UX design.
+    </div>
+  </div>
+
+  <div class="video-grid">
+
+    <!-- FEATURED VIDEO: Mostafa Nageeb Arabic PM Intro -->
+    <div class="video-card" style="border: 2px solid var(--accent-emerald);">
+      <div class="video-player-wrap">
+        <iframe src="https://www.youtube-nocookie.com/embed/2oDHp7e6jpw" title="Introduction to Product Management (in Arabic) - Mostafa Nageeb" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <div>
+          <div class="res-badges" style="margin-bottom: 8px;">
+            <span class="res-pill pill-tier1">Featured Masterclass</span>
+            <span class="res-pill pill-format">Arabic PM Guide</span>
+            <span class="res-pill pill-free">Free</span>
+          </div>
+          <h4 class="video-title">Introduction to Product Management (in Arabic)</h4>
+          <div class="video-creator">Instructor: Mostafa Nageeb (VP of Product / Tech Leader)</div>
+          <p class="video-desc">
+            The foundational Arabic lecture explaining what a Product Manager actually does, how to transition from individual technical/marketing roles into product ownership, commercial awareness, and how to develop deep analytical intuition.
+          </p>
+          <div class="res-outcome">
+            <strong>Key Learning:</strong> Essential mental models for the PM transition. Directly introduces the reading list in the <em>Ranked PM Books</em> tab.
+          </div>
+        </div>
+        <div class="res-footer" style="margin-top: 14px;">
+          <span class="res-meta-time">Duration: ~63 mins</span>
+          <a href="https://www.youtube.com/watch?v=2oDHp7e6jpw" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Watch on YouTube &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIDEO 1 -->
+    <div class="video-card">
+      <div class="video-player-wrap">
+        <iframe src="https://www.youtube-nocookie.com/embed/VJ-e6b7-jBg" title="Analyzing drops in Google Search traffic - Google Search Console Training" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <div>
+          <div class="res-badges" style="margin-bottom: 8px;">
+            <span class="res-pill pill-tier1">Google Search Central</span>
+            <span class="res-pill pill-format">Official Video</span>
+            <span class="res-pill pill-free">Free</span>
+          </div>
+          <h4 class="video-title">Analyzing drops in Google Search traffic</h4>
+          <div class="video-creator">Instructor: Daniel Waisberg (Search Advocate at Google)</div>
+          <p class="video-desc">
+            Learn the exact methodology for diagnosing traffic drops: analyzing graph shapes (cliffs vs gradual declines), isolating technical bugs, factoring in core updates, and utilizing Google Trends to verify industry seasonality.
+          </p>
+          <div class="res-outcome">
+            <strong>Key Learning:</strong> Directly applies to Competency 1 and Week 2 of your roadmap.
+          </div>
+        </div>
+        <div class="res-footer" style="margin-top: 14px;">
+          <span class="res-meta-time">Duration: ~15 mins</span>
+          <a href="https://www.youtube.com/watch?v=VJ-e6b7-jBg" target="_blank" class="btn btn-outline btn-sm">Watch on YouTube &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIDEO 2 -->
+    <div class="video-card">
+      <div class="video-player-wrap">
+        <iframe src="https://www.youtube-nocookie.com/embed/WCboOImUuBk" title="Intro to Google Search Console - Google Search Console Training" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <div>
+          <div class="res-badges" style="margin-bottom: 8px;">
+            <span class="res-pill pill-tier1">Google Search Central</span>
+            <span class="res-pill pill-format">Official Video</span>
+            <span class="res-pill pill-free">Free</span>
+          </div>
+          <h4 class="video-title">Introduction to Google Search Console</h4>
+          <div class="video-creator">Instructor: Daniel Waisberg (Search Advocate at Google)</div>
+          <p class="video-desc">
+            Foundational walk-through of Search Console: how Google discovers, indexes, and serves pages, and how to interpret search performance metrics (impressions, clicks, CTR, and average position).
+          </p>
+          <div class="res-outcome">
+            <strong>Key Learning:</strong> Foundational data architecture for your AI Diagnostic Assistant.
+          </div>
+        </div>
+        <div class="res-footer" style="margin-top: 14px;">
+          <span class="res-meta-time">Duration: ~12 mins</span>
+          <a href="https://www.youtube.com/watch?v=WCboOImUuBk" target="_blank" class="btn btn-outline btn-sm">Watch on YouTube &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIDEO 3 -->
+    <div class="video-card">
+      <div class="video-player-wrap">
+        <iframe src="https://www.youtube-nocookie.com/embed/sfGtw2C95Ms" title="Clayton Christensen on Jobs to Be Done Milkshake Marketing" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <div>
+          <div class="res-badges" style="margin-bottom: 8px;">
+            <span class="res-pill pill-tier2">Harvard Business School</span>
+            <span class="res-pill pill-format">Lecture / Case</span>
+            <span class="res-pill pill-free">Free</span>
+          </div>
+          <h4 class="video-title">Jobs to Be Done Theory (The Milkshake Case)</h4>
+          <div class="video-creator">Prof. Clayton Christensen (Harvard Business School)</div>
+          <p class="video-desc">
+            The legendary product discovery case: why customer demographic data fails, and why understanding the underlying "job" customers hire a product or search result to do is the key to product success.
+          </p>
+          <div class="res-outcome">
+            <strong>Key Learning:</strong> Essential foundation for user interviews and search intent modeling.
+          </div>
+        </div>
+        <div class="res-footer" style="margin-top: 14px;">
+          <span class="res-meta-time">Duration: ~5 mins</span>
+          <a href="https://www.youtube.com/watch?v=sfGtw2C95Ms" target="_blank" class="btn btn-outline btn-sm">Watch on YouTube &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIDEO 4 -->
+    <div class="video-card">
+      <div class="video-player-wrap">
+        <iframe src="https://www.youtube-nocookie.com/embed/c9Wg6Cb_YlU" title="Wireframing for Beginners - Figma Official" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <div>
+          <div class="res-badges" style="margin-bottom: 8px;">
+            <span class="res-pill pill-tier1">Figma Official</span>
+            <span class="res-pill pill-format">Hands-On Tutorial</span>
+            <span class="res-pill pill-free">Free</span>
+          </div>
+          <h4 class="video-title">Wireframing for Beginners: Product UI Design</h4>
+          <div class="video-creator">Figma Design Team</div>
+          <p class="video-desc">
+            Learn how to turn product ideas and user requirements into clean, low-fidelity wireframes. Covers layout hierarchy, button states, and designing user flows before writing software code.
+          </p>
+          <div class="res-outcome">
+            <strong>Key Learning:</strong> Direct preparation for Artifact 7 (Diagnostic Results Screen Wireframe).
+          </div>
+        </div>
+        <div class="res-footer" style="margin-top: 14px;">
+          <span class="res-meta-time">Duration: ~18 mins</span>
+          <a href="https://www.youtube.com/watch?v=c9Wg6Cb_YlU" target="_blank" class="btn btn-outline btn-sm">Watch on YouTube &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIDEO 5 -->
+    <div class="video-card">
+      <div class="video-player-wrap" style="background: linear-gradient(135deg, #064e3b 0%, #0f5132 100%); display: flex; align-items: center; justify-content: center; color: #ffffff; text-align: center; padding: 20px;">
+        <div>
+          <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 6px;">Google Search Console Training Series</div>
+          <div style="font-size: 0.82rem; color: #d1fae5;">Complete Official YouTube Series (15+ Episodes)</div>
+        </div>
+      </div>
+      <div class="video-info">
+        <div>
+          <div class="res-badges" style="margin-bottom: 8px;">
+            <span class="res-pill pill-tier1">Google Search Central</span>
+            <span class="res-pill pill-format">Complete Playlist</span>
+            <span class="res-pill pill-free">Free</span>
+          </div>
+          <h4 class="video-title">Official Google Search Console Training Series</h4>
+          <div class="video-creator">Google Search Central Channel</div>
+          <p class="video-desc">
+            The full official video series covering URL Inspection, Index Coverage reports, Sitemaps submission, Crawl Stats, Core Web Vitals, and Rich Snippet enhancements.
+          </p>
+          <div class="res-outcome">
+            <strong>Key Learning:</strong> Comprehensive mastery of GSC tools and reporting mechanisms.
+          </div>
+        </div>
+        <div class="res-footer" style="margin-top: 14px;">
+          <span class="res-meta-time">Full Series: ~3.5 Hours</span>
+          <a href="https://www.youtube.com/playlist?list=PLIFsF79cQFALFH9oiLNkoQTmwT8JtGRoo" target="_blank" class="btn btn-outline btn-sm">Open Playlist on YouTube &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIDEO 6 -->
+    <div class="video-card">
+      <div class="video-player-wrap" style="background: linear-gradient(135deg, #15803d 0%, #10b981 100%); display: flex; align-items: center; justify-content: center; color: #ffffff; text-align: center; padding: 20px;">
+        <div>
+          <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 6px;">Agile User Stories &amp; Acceptance Criteria</div>
+          <div style="font-size: 0.82rem; color: #ecfdf5;">Product Requirements Masterclass</div>
+        </div>
+      </div>
+      <div class="video-info">
+        <div>
+          <div class="res-badges" style="margin-bottom: 8px;">
+            <span class="res-pill pill-tier1">Agile &amp; PM Coach</span>
+            <span class="res-pill pill-format">Product Guide</span>
+            <span class="res-pill pill-free">Free</span>
+          </div>
+          <h4 class="video-title">Writing Developer-Ready User Stories in Jira</h4>
+          <div class="video-creator">Atlassian Agile Coaching Resources</div>
+          <p class="video-desc">
+            How to structure user stories following the Persona + Goal + Benefit formula, attach unambiguous Given/When/Then acceptance criteria, and establish an objective Definition of Done.
+          </p>
+          <div class="res-outcome">
+            <strong>Key Learning:</strong> Direct preparation for Competency 7 and Artifact 8 (PRD).
+          </div>
+        </div>
+        <div class="res-footer" style="margin-top: 14px;">
+          <span class="res-meta-time">Duration: ~15 mins</span>
+          <a href="https://www.atlassian.com/agile/project-management/user-stories" target="_blank" class="btn btn-outline btn-sm">Study Atlassian Guide &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TAB: RANKED PM BOOKS & ESSENTIAL READING -->
+<section id="tab-books" class="content-section">
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">Essential PM &amp; Analytics Reading Library</h2>
+      <p class="section-lead">Curated from Mostafa Nageeb's Product Management Masterclass and ranked in order of strategic value, practical leverage, and relevance to the SEO-to-PM transition.</p>
+    </div>
+    <div style="font-size: 0.85rem; color: var(--text-light); font-weight: 600;">
+      12 Ranked Foundational Works
+    </div>
+  </div>
+
+  <div class="callout callout-mint" style="margin-bottom: 24px;">
+    <div>
+      <span class="badge badge-mint" style="margin-bottom: 6px; display: inline-block;">Masterclass Curation</span><br>
+      <strong>How to Use This Reading List:</strong> You do not need to read all 12 books before starting. They are ranked below from highest leverage (foundational essentials) to specialized tactical topics. Start with Rank 1 and Rank 2 during Phase 1 and Phase 2 of your roadmap.
+    </div>
+  </div>
+
+  <div class="books-grid">
+
+    <!-- BOOK 1 -->
+    <div class="book-card rank-top">
+      <div class="book-rank-badge">Rank 1 - The Essential PM Bible</div>
+      <div class="book-header">
+        <div>
+          <h3 class="book-title">Inspired: How to Create Tech Products Customers Love</h3>
+          <div class="book-author">By Marty Cagan (Silicon Valley Product Group)</div>
+          <div class="book-category">Domain: Core Tech Product Management &amp; Discovery</div>
+        </div>
+      </div>
+      <p class="book-summary">
+        Widely regarded as the single most important book for aspiring and practicing software product managers. Explains the structural difference between "feature factories" (teams that just build whatever stakeholders request) and true product teams that discover solutions that are <strong>valuable</strong>, <strong>usable</strong>, <strong>feasible</strong>, and <strong>viable</strong>.
+      </p>
+      <div class="book-bridge-box">
+        <strong>Strategic Value for SEO &rarr; PM:</strong> Teaches you how to stop thinking like an SEO ticket-taker ("Client wants meta descriptions") and start leading continuous product discovery ("What underlying problem are users trying to solve?").
+      </div>
+      <div class="book-roadmap-link">
+        <strong>Roadmap Alignment:</strong> Study during <em>Phase 1 (Weeks 1 to 3)</em> alongside User Research and Problem Discovery.
+      </div>
+    </div>
+
+    <!-- BOOK 2 -->
+    <div class="book-card rank-top">
+      <div class="book-rank-badge">Rank 2 - Core Product Analytics</div>
+      <div class="book-header">
+        <div>
+          <h3 class="book-title">Lean Analytics: Use Data to Build a Better Startup Faster</h3>
+          <div class="book-author">By Alistair Croll &amp; Benjamin Yoskovitz</div>
+          <div class="book-category">Domain: Metrics, KPI Trees &amp; Behavioral Data</div>
+        </div>
+      </div>
+      <p class="book-summary">
+        A masterclass on choosing the <strong>One Metric That Matters (OMTM)</strong> at each stage of a product's lifecycle. Details the fatal trap of vanity metrics versus actionable behavioral metrics, cohort retention analysis, and establishing empirical baselines.
+      </p>
+      <div class="book-bridge-box">
+        <strong>Strategic Value for SEO &rarr; PM:</strong> Directly bridges your Search Console data familiarity (impressions, clicks, rankings) into product retention cohorts and user conversion funnels.
+      </div>
+      <div class="book-roadmap-link">
+        <strong>Roadmap Alignment:</strong> Study during <em>Phase 2 (Weeks 4 to 6)</em> alongside Metrics and KPI Trees.
+      </div>
+    </div>
+
+    <!-- BOOK 3 -->
+    <div class="book-card rank-high">
+      <div class="book-rank-badge">Rank 3 - Web Usability &amp; UX</div>
+      <div class="book-header">
+        <div>
+          <h3 class="book-title">Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability</h3>
+          <div class="book-author">By Steve Krug</div>
+          <div class="book-category">Domain: User Experience (UX) &amp; Friction Elimination</div>
+        </div>
+      </div>
+      <p class="book-summary">
+        The most accessible, entertaining, and profoundly practical book on web design and user psychology ever written. Focuses on intuitive visual hierarchy, designing for scanning rather than reading, and eliminating cognitive friction.
+      </p>
+      <div class="book-bridge-box">
+        <strong>Strategic Value for SEO &rarr; PM:</strong> An SEO who understands Krug’s laws can immediately diagnose why high-ranking landing pages suffer high bounce rates and fail to convert.
+      </div>
+      <div class="book-roadmap-link">
+        <strong>Roadmap Alignment:</strong> Study during <em>Phase 3 (Weeks 7 to 8)</em> alongside Usability Heuristics &amp; Wireframing.
+      </div>
+    </div>
+
+    <!-- BOOK 4 -->
+    <div class="book-card rank-high">
+      <div class="book-rank-badge">Rank 4 - Data Rigor &amp; Critical Thinking</div>
+      <div class="book-header">
+        <div>
+          <h3 class="book-title">How to Lie with Statistics</h3>
+          <div class="book-author">By Darrell Huff</div>
+          <div class="book-category">Domain: Critical Data Literacy &amp; Fallacy Detection</div>
+        </div>
+      </div>
+      <p class="book-summary">
+        A short, punchy, classic guide exposing the myriad ways data visualizations, charts, truncated graph axes, and correlation claims can mislead observers and distort decision-making.
+      </p>
+      <div class="book-bridge-box">
+        <strong>Strategic Value for SEO &rarr; PM:</strong> Equips you with intellectual defenses against false attribution (e.g., claiming a minor SEO tweak caused a traffic surge when market seasonality was the real cause).
+      </div>
+      <div class="book-roadmap-link">
+        <strong>Roadmap Alignment:</strong> Study during <em>Phase 1 (Week 2)</em> alongside Diagnostic Anomaly Analysis.
+      </div>
+    </div>
+
+    <!-- BOOK 5 -->
+    <div class="book-card">
+      <div class="book-rank-badge">Rank 5 - User Psychology &amp; Cognitive Biases</div>
+      <div class="book-header">
+        <div>
+          <h3 class="book-title">Thinking, Fast and Slow</h3>
+          <div class="book-author">By Daniel Kahneman (Nobel Laureate)</div>
+          <div class="book-category">Domain: Behavioral Economics &amp; Cognitive Biases</div>
+        </div>
+      </div>
+      <p class="book-summary">
+        The groundbreaking exploration of the two systems of human cognition: System 1 (fast, instinctive, emotional) and System 2 (slow, deliberate, logical). Details confirmation bias, loss aversion, anchoring, and the framing effect.
+      </p>
+      <div class="book-bridge-box">
+        <strong>Strategic Value for SEO &rarr; PM:</strong> Crucial for understanding how users scan SERP titles (System 1) and why stakeholders react defensively to data that contradicts their initial assumptions.
+      </div>
+      <div class="book-roadmap-link">
+        <strong>Roadmap Alignment:</strong> Study during <em>Phase 1 (Week 3)</em> alongside User Interviews and Search Intent.
+      </div>
+    </div>
+
+    <!-- BOOK 6 -->
+    <div class="book-card">
+      <div class="book-rank-badge">Rank 6 - Growth &amp; Customer Acquisition</div>
+      <div class="book-header">
+        <div>
+          <h3 class="book-title">Traction: How Any Startup Can Achieve Explosive Customer Growth</h3>
+          <div class="book-author">By Gabriel Weinberg &amp; Justin Mares</div>
+          <div class="book-category">Domain: Growth Strategy &amp; Marketing Channels</div>
+        </div>
+      </div>
+      <p class="book-summary">
+        Introduces the "Bullseye Framework" for evaluating and testing 19 customer acquisition channels (including SEO, SEM, Content Marketing, Viral Marketing, and Partnerships) to find the single high-impact channel for your product.
+      </p>
+      <div class="book-bridge-box">
+        <strong>Strategic Value for SEO &rarr; PM:</strong> Teaches you to place SEO into its proper strategic context among all acquisition vectors, preventing the common SEO bias of seeing organic search as the only solution.
+      </div>
+      <div class="book-roadmap-link">
+        <strong>Roadmap Alignment:</strong> Study during <em>Phase 2 (Week 4)</em> alongside Opportunity Sizing.
+      </div>
+    </div>
+
+    <!-- BOOK 7 -->
+    <div class="book-card">
+      <div class="book-rank-badge">Rank 7 - Product Engagement &amp; Habit Loops</div>
+      <div class="book-header">
+        <div>
+          <h3 class="book-title">Hooked: How to Build Habit-Forming Products</h3>
+          <div class="book-author">By Nir Eyal</div>
+          <div class="book-category">Domain: Product Engagement &amp; Retention Loops</div>
+        </div>
+      </div>
+      <p class="book-summary">
+        Outlines the four-step Hook Model: <strong>Trigger &rarr; Action &rarr; Variable Reward &rarr; Investment</strong>. Explains how products subtlely encourage repeat, autonomous user engagement without paid re-acquisition.
+      </p>
+      <div class="book-bridge-box">
+        <strong>Strategic Value for SEO &rarr; PM:</strong> Helps you design the AI SEO Diagnostic tool so that practitioners do not run it once and forget it, but integrate it into their weekly recurring Monday morning workflow.
+      </div>
+      <div class="book-roadmap-link">
+        <strong>Roadmap Alignment:</strong> Study during <em>Phase 3 (Week 8)</em> alongside Wireframing &amp; UX.
+      </div>
+    </div>
+
+    <!-- BOOK 8 -->
+    <div class="book-card">
+      <div class="book-rank-badge">Rank 8 - Stakeholder Negotiation &amp; Communication</div>
+      <div class="book-header">
+        <div>
+          <h3 class="book-title">Never Split the Difference: Negotiating As If Your Life Depended On It</h3>
+          <div class="book-author">By Chris Voss (Former FBI Lead Hostage Negotiator)</div>
+          <div class="book-category">Domain: Tactical Empathy &amp; Cross-Functional Alignment</div>
+        </div>
+      </div>
+      <p class="book-summary">
+        Teaches negotiation based on emotional intelligence, active listening, calibrated questions ("How am I supposed to do that?"), mirroring, and tactical empathy rather than aggressive bargaining.
+      </p>
+      <div class="book-bridge-box">
+        <strong>Strategic Value for SEO &rarr; PM:</strong> The ultimate secret weapon for PMs who must influence engineering teams without formal authority, manage demanding clients, and defend product scope against executive pressure.
+      </div>
+      <div class="book-roadmap-link">
+        <strong>Roadmap Alignment:</strong> Study during <em>Phase 4 (Week 11)</em> alongside Technical Communication &amp; Executive Updates.
+      </div>
+    </div>
+
+    <!-- BOOK 9 -->
+    <div class="book-card">
+      <div class="book-rank-badge">Rank 9 - Commercial &amp; Platform Strategy</div>
+      <div class="book-header">
+        <div>
+          <h3 class="book-title">Stratechery &amp; Remains of the Day (Strategic Essays)</h3>
+          <div class="book-author">By Ben Thompson (Stratechery.com) &amp; Eugene Wei (EugeneWei.com)</div>
+          <div class="book-category">Domain: Aggregation Theory &amp; Tech Ecosystem Strategy</div>
+        </div>
+      </div>
+      <p class="book-summary">
+        Essential reading on Aggregation Theory, platform economics, two-sided networks, and how companies like Google, Apple, and Amazon leverage distribution advantages. Also includes Wei's landmark essay "Status as a Service".
+      </p>
+      <div class="book-bridge-box">
+        <strong>Strategic Value for SEO &rarr; PM:</strong> Provides the macroeconomic perspective needed to understand why Google rolls out AI Overviews, zero-click SERPs, and how aggregators dominate search traffic.
+      </div>
+      <div class="book-roadmap-link">
+        <strong>Roadmap Alignment:</strong> Read as continuous commercial awareness throughout <em>Phase 2 and Phase 4</em>.
+      </div>
+    </div>
+
+    <!-- BOOK 10 -->
+    <div class="book-card">
+      <div class="book-rank-badge">Rank 10 - Probabilistic Forecasting</div>
+      <div class="book-header">
+        <div>
+          <h3 class="book-title">The Signal and the Noise &amp; Superforecasting</h3>
+          <div class="book-author">By Nate Silver / Philip E. Tetlock</div>
+          <div class="book-category">Domain: Probabilistic Thinking &amp; Bayesian Updating</div>
+        </div>
+      </div>
+      <p class="book-summary">
+        Explores why so many predictions fail, how to distinguish meaningful underlying trends (the signal) from random noise, and how "superforecasters" update their beliefs continuously using Bayesian probability.
+      </p>
+      <div class="book-bridge-box">
+        <strong>Strategic Value for SEO &rarr; PM:</strong> Invaluable when evaluating whether daily Search Console fluctuation is random noise or a real trend requiring action.
+      </div>
+      <div class="book-roadmap-link">
+        <strong>Roadmap Alignment:</strong> Study during <em>Phase 3 (Weeks 9 to 10)</em> alongside Experimentation and Hypothesis Testing.
+      </div>
+    </div>
+
+    <!-- BOOK 11 -->
+    <div class="book-card">
+      <div class="book-rank-badge">Rank 11 - Foundations of Product Design</div>
+      <div class="book-header">
+        <div>
+          <h3 class="book-title">The Design of Everyday Things</h3>
+          <div class="book-author">By Don Norman</div>
+          <div class="book-category">Domain: Industrial Design, Affordances &amp; Mental Models</div>
+        </div>
+      </div>
+      <p class="book-summary">
+        The legendary text that introduced the world to user-centered design, the concept of "affordances", signifiers, mappings, feedback loops, and why poorly designed doors ("Norman Doors") frustrate humans everywhere.
+      </p>
+      <div class="book-bridge-box">
+        <strong>Strategic Value for SEO &rarr; PM:</strong> Trains your eyes to spot when website navigation, filters, and mobile menus violate human spatial intuition.
+      </div>
+      <div class="book-roadmap-link">
+        <strong>Roadmap Alignment:</strong> Complementary reading for <em>Phase 3 (Week 7)</em>.
+      </div>
+    </div>
+
+    <!-- BOOK 12 -->
+    <div class="book-card">
+      <div class="book-rank-badge">Rank 12 - Agile Engineering Delivery</div>
+      <div class="book-header">
+        <div>
+          <h3 class="book-title">Scrum: The Art of Doing Twice the Work in Half the Time</h3>
+          <div class="book-author">By Jeff Sutherland (Co-Creator of Scrum)</div>
+          <div class="book-category">Domain: Agile Frameworks, Sprints &amp; Velocity</div>
+        </div>
+      </div>
+      <p class="book-summary">
+        The origin story and operational mechanics of the Scrum agile framework: timeboxed sprints, backlog grooming, daily standups, burn-down charts, and eliminating cross-team impediments.
+      </p>
+      <div class="book-bridge-box">
+        <strong>Strategic Value for SEO &rarr; PM:</strong> Gives you the operational vocabulary and workflow discipline necessary to interface smoothly with software development teams.
+      </div>
+      <div class="book-roadmap-link">
+        <strong>Roadmap Alignment:</strong> Study during <em>Phase 4 (Week 11)</em> alongside PRD authoring and JIRA tickets.
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- TAB 4: THE AI CAPSTONE PROJECT -->
 <section id="tab-capstone" class="content-section">
   <div class="capstone-hero">
@@ -3740,203 +4768,6 @@ h1, h2, h3, h4, h5, h6 {
         <input type="checkbox" onchange="toggleArtifact('art-12')">
         <span class="check-text"><strong>Mark Artifact 12 Complete</strong> (Include in portfolio)</span>
       </label>
-    </div>
-
-  </div>
-</section>
-
-<!-- TAB: VIDEO MASTERCLASSES -->
-<section id="tab-videos" class="content-section">
-  <div class="section-head">
-    <div>
-      <h2 class="section-title">Video Masterclasses &amp; YouTube Training</h2>
-      <p class="section-lead">Curated, high-impact video lectures and hands-on tutorials from Google Search Central, Harvard Business School, and product leaders.</p>
-    </div>
-    <div style="font-size: 0.85rem; color: var(--text-light); font-weight: 600;">
-      6 Core Video Modules
-    </div>
-  </div>
-
-  <div class="callout" style="margin-bottom: 24px;">
-    <div>
-      <strong>Interactive Video Hub:</strong> Watch the official video tutorials directly below or open them in YouTube. Each video is specifically selected to bridge search engine data analysis with product discovery, behavioral analytics, and UX design.
-    </div>
-  </div>
-
-  <div class="video-grid">
-
-    <!-- VIDEO 1 -->
-    <div class="video-card">
-      <div class="video-player-wrap">
-        <iframe src="https://www.youtube-nocookie.com/embed/VJ-e6b7-jBg" title="Analyzing drops in Google Search traffic - Google Search Console Training" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="video-info">
-        <div>
-          <div class="res-badges" style="margin-bottom: 8px;">
-            <span class="res-pill pill-tier1">Google Search Central</span>
-            <span class="res-pill pill-format">Official Video</span>
-            <span class="res-pill pill-free">Free</span>
-          </div>
-          <h4 class="video-title">Analyzing drops in Google Search traffic</h4>
-          <div class="video-creator">Instructor: Daniel Waisberg (Search Advocate at Google)</div>
-          <p class="video-desc">
-            Learn the exact methodology for diagnosing traffic drops: analyzing graph shapes (cliffs vs gradual declines), isolating technical bugs, factoring in core updates, and utilizing Google Trends to verify industry seasonality.
-          </p>
-          <div class="res-outcome">
-            <strong>Key Learning:</strong> Directly applies to Competency 1 and Week 2 of your roadmap.
-          </div>
-        </div>
-        <div class="res-footer" style="margin-top: 14px;">
-          <span class="res-meta-time">Duration: ~15 mins</span>
-          <a href="https://www.youtube.com/watch?v=VJ-e6b7-jBg" target="_blank" class="btn btn-outline btn-sm">Watch on YouTube &rarr;</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- VIDEO 2 -->
-    <div class="video-card">
-      <div class="video-player-wrap">
-        <iframe src="https://www.youtube-nocookie.com/embed/WCboOImUuBk" title="Intro to Google Search Console - Google Search Console Training" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="video-info">
-        <div>
-          <div class="res-badges" style="margin-bottom: 8px;">
-            <span class="res-pill pill-tier1">Google Search Central</span>
-            <span class="res-pill pill-format">Official Video</span>
-            <span class="res-pill pill-free">Free</span>
-          </div>
-          <h4 class="video-title">Introduction to Google Search Console</h4>
-          <div class="video-creator">Instructor: Daniel Waisberg (Search Advocate at Google)</div>
-          <p class="video-desc">
-            Foundational walk-through of Search Console: how Google discovers, indexes, and serves pages, and how to interpret search performance metrics (impressions, clicks, CTR, and average position).
-          </p>
-          <div class="res-outcome">
-            <strong>Key Learning:</strong> Foundational data architecture for your AI Diagnostic Assistant.
-          </div>
-        </div>
-        <div class="res-footer" style="margin-top: 14px;">
-          <span class="res-meta-time">Duration: ~12 mins</span>
-          <a href="https://www.youtube.com/watch?v=WCboOImUuBk" target="_blank" class="btn btn-outline btn-sm">Watch on YouTube &rarr;</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- VIDEO 3 -->
-    <div class="video-card">
-      <div class="video-player-wrap">
-        <iframe src="https://www.youtube-nocookie.com/embed/sfGtw2C95Ms" title="Clayton Christensen on Jobs to Be Done Milkshake Marketing" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="video-info">
-        <div>
-          <div class="res-badges" style="margin-bottom: 8px;">
-            <span class="res-pill pill-tier2">Harvard Business School</span>
-            <span class="res-pill pill-format">Lecture / Case</span>
-            <span class="res-pill pill-free">Free</span>
-          </div>
-          <h4 class="video-title">Jobs to Be Done Theory (The Milkshake Case)</h4>
-          <div class="video-creator">Prof. Clayton Christensen (Harvard Business School)</div>
-          <p class="video-desc">
-            The legendary product discovery case: why customer demographic data fails, and why understanding the underlying "job" customers hire a product or search result to do is the key to product success.
-          </p>
-          <div class="res-outcome">
-            <strong>Key Learning:</strong> Essential foundation for user interviews and search intent modeling.
-          </div>
-        </div>
-        <div class="res-footer" style="margin-top: 14px;">
-          <span class="res-meta-time">Duration: ~5 mins</span>
-          <a href="https://www.youtube.com/watch?v=sfGtw2C95Ms" target="_blank" class="btn btn-outline btn-sm">Watch on YouTube &rarr;</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- VIDEO 4 -->
-    <div class="video-card">
-      <div class="video-player-wrap">
-        <iframe src="https://www.youtube-nocookie.com/embed/c9Wg6Cb_YlU" title="Wireframing for Beginners - Figma Official" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="video-info">
-        <div>
-          <div class="res-badges" style="margin-bottom: 8px;">
-            <span class="res-pill pill-tier1">Figma Official</span>
-            <span class="res-pill pill-format">Hands-On Tutorial</span>
-            <span class="res-pill pill-free">Free</span>
-          </div>
-          <h4 class="video-title">Wireframing for Beginners: Product UI Design</h4>
-          <div class="video-creator">Figma Design Team</div>
-          <p class="video-desc">
-            Learn how to turn product ideas and user requirements into clean, low-fidelity wireframes. Covers layout hierarchy, button states, and designing user flows before writing software code.
-          </p>
-          <div class="res-outcome">
-            <strong>Key Learning:</strong> Direct preparation for Artifact 7 (Diagnostic Results Screen Wireframe).
-          </div>
-        </div>
-        <div class="res-footer" style="margin-top: 14px;">
-          <span class="res-meta-time">Duration: ~18 mins</span>
-          <a href="https://www.youtube.com/watch?v=c9Wg6Cb_YlU" target="_blank" class="btn btn-outline btn-sm">Watch on YouTube &rarr;</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- VIDEO 5 -->
-    <div class="video-card">
-      <div class="video-player-wrap" style="background: linear-gradient(135deg, #064e3b 0%, #0f5132 100%); display: flex; align-items: center; justify-content: center; color: #ffffff; text-align: center; padding: 20px;">
-        <div>
-          <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 6px;">Google Search Console Training Series</div>
-          <div style="font-size: 0.82rem; color: #d1fae5;">Complete Official YouTube Series (15+ Episodes)</div>
-        </div>
-      </div>
-      <div class="video-info">
-        <div>
-          <div class="res-badges" style="margin-bottom: 8px;">
-            <span class="res-pill pill-tier1">Google Search Central</span>
-            <span class="res-pill pill-format">Complete Playlist</span>
-            <span class="res-pill pill-free">Free</span>
-          </div>
-          <h4 class="video-title">Official Google Search Console Training Series</h4>
-          <div class="video-creator">Google Search Central Channel</div>
-          <p class="video-desc">
-            The full official video series covering URL Inspection, Index Coverage reports, Sitemaps submission, Crawl Stats, Core Web Vitals, and Rich Snippet enhancements.
-          </p>
-          <div class="res-outcome">
-            <strong>Key Learning:</strong> Comprehensive mastery of GSC tools and reporting mechanisms.
-          </div>
-        </div>
-        <div class="res-footer" style="margin-top: 14px;">
-          <span class="res-meta-time">Full Series: ~3.5 Hours</span>
-          <a href="https://www.youtube.com/playlist?list=PLIFsF79cQFALFH9oiLNkoQTmwT8JtGRoo" target="_blank" class="btn btn-outline btn-sm">Open Playlist on YouTube &rarr;</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- VIDEO 6 -->
-    <div class="video-card">
-      <div class="video-player-wrap" style="background: linear-gradient(135deg, #15803d 0%, #10b981 100%); display: flex; align-items: center; justify-content: center; color: #ffffff; text-align: center; padding: 20px;">
-        <div>
-          <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 6px;">Agile User Stories &amp; Acceptance Criteria</div>
-          <div style="font-size: 0.82rem; color: #ecfdf5;">Product Requirements Masterclass</div>
-        </div>
-      </div>
-      <div class="video-info">
-        <div>
-          <div class="res-badges" style="margin-bottom: 8px;">
-            <span class="res-pill pill-tier1">Agile &amp; PM Coach</span>
-            <span class="res-pill pill-format">Product Guide</span>
-            <span class="res-pill pill-free">Free</span>
-          </div>
-          <h4 class="video-title">Writing Developer-Ready User Stories in Jira</h4>
-          <div class="video-creator">Atlassian Agile Coaching Resources</div>
-          <p class="video-desc">
-            How to structure user stories following the Persona + Goal + Benefit formula, attach unambiguous Given/When/Then acceptance criteria, and establish an objective Definition of Done.
-          </p>
-          <div class="res-outcome">
-            <strong>Key Learning:</strong> Direct preparation for Competency 7 and Artifact 8 (PRD).
-          </div>
-        </div>
-        <div class="res-footer" style="margin-top: 14px;">
-          <span class="res-meta-time">Duration: ~15 mins</span>
-          <a href="https://www.atlassian.com/agile/project-management/user-stories" target="_blank" class="btn btn-outline btn-sm">Study Atlassian Guide &rarr;</a>
-        </div>
-      </div>
     </div>
 
   </div>
@@ -5096,28 +5927,88 @@ function initStorageIndicator() {
 }
 
 // ==========================================
-// Tabs Navigation
+// Tabs Navigation & Hash Deep Linking
 // ==========================================
 function initTabs() {
   const tabButtons = document.querySelectorAll('.nav-tab-btn');
-  const sections = document.querySelectorAll('.content-section');
 
   tabButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       const targetId = btn.getAttribute('data-tab');
-
-      tabButtons.forEach(b => b.classList.remove('active'));
-      sections.forEach(s => s.classList.remove('active'));
-
-      btn.classList.add('active');
-      const targetSection = document.getElementById(targetId);
-      if (targetSection) {
-        targetSection.classList.add('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+      switchTab(targetId);
     });
   });
+
+  // Deep linking via URL hash on load
+  const hash = window.location.hash.replace('#', '');
+  if (hash) {
+    const targetSection = document.getElementById(hash);
+    if (targetSection && targetSection.classList.contains('content-section')) {
+      switchTab(hash, false);
+    }
+  }
+
+  // Handle browser back/forward buttons
+  window.addEventListener('popstate', () => {
+    const currentHash = window.location.hash.replace('#', '');
+    if (currentHash) {
+      const targetSection = document.getElementById(currentHash);
+      if (targetSection && targetSection.classList.contains('content-section')) {
+        switchTab(currentHash, false);
+      }
+    } else {
+      switchTab('tab-overview', false);
+    }
+  });
 }
+
+function switchTab(targetId, shouldScroll = true) {
+  const tabButtons = document.querySelectorAll('.nav-tab-btn');
+  const sections = document.querySelectorAll('.content-section');
+
+  let activeBtn = null;
+  tabButtons.forEach(btn => {
+    if (btn.getAttribute('data-tab') === targetId) {
+      btn.classList.add('active');
+      activeBtn = btn;
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+
+  let activeSection = null;
+  sections.forEach(sec => {
+    if (sec.id === targetId) {
+      sec.classList.add('active');
+      activeSection = sec;
+    } else {
+      sec.classList.remove('active');
+    }
+  });
+
+  if (activeBtn) {
+    activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
+  }
+
+  // Update URL hash cleanly
+  if (window.location.hash.replace('#', '') !== targetId) {
+    if (history.pushState) {
+      history.pushState(null, null, '#' + targetId);
+    } else {
+      window.location.hash = targetId;
+    }
+  }
+
+  if (shouldScroll && activeSection) {
+    const container = document.getElementById('main-content');
+    if (container) {
+      const topPos = container.getBoundingClientRect().top + window.pageYOffset - 75;
+      window.scrollTo({ top: Math.max(0, topPos), behavior: 'smooth' });
+    }
+  }
+}
+window.switchTab = switchTab;
 
 // ==========================================
 // Accordions (Expand / Collapse)
