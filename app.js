@@ -78,10 +78,10 @@ function initStorageIndicator() {
   const indicator = document.getElementById('storage-status-indicator');
   if (indicator) {
     if (isLocalStorageAvailable) {
-      indicator.innerHTML = '🟢 Browser Storage Active';
+      indicator.innerHTML = '<span style="color:#15803d; font-weight: bold;">[Active]</span> Browser Storage Active';
       indicator.style.color = '#15803d';
     } else {
-      indicator.innerHTML = '🟡 Session Mode (Storage Blocked)';
+      indicator.innerHTML = '<span style="color:#b45309; font-weight: bold;">[Session]</span> Session Mode (Storage Blocked)';
       indicator.style.color = '#b45309';
     }
   }
@@ -308,7 +308,7 @@ function updateAllMetrics() {
     } else if (totalChecked < 48) {
       phaseDisplay.textContent = 'Phase 4: Capstone';
     } else {
-      phaseDisplay.textContent = '🏆 100% Certified!';
+      phaseDisplay.textContent = '100% Certified!';
     }
   }
 }
@@ -449,7 +449,7 @@ function renderLearningLog() {
       <td><strong>${entry.hours.toFixed(2)}h</strong></td>
       <td style="font-size: 0.84rem; line-height: 1.45;">${escapeHtml(entry.insight)}</td>
       <td style="text-align: center;">
-        <button class="btn btn-danger-outline btn-sm" onclick="deleteLearningLogEntry(${entry.id})" title="Delete entry">🗑️</button>
+        <button class="btn btn-danger-outline btn-sm" onclick="deleteLearningLogEntry(${entry.id})" title="Delete entry">Delete</button>
       </td>
     </tr>
   `).join('');

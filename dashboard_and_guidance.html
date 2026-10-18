@@ -10,7 +10,7 @@
   <!-- Learning Log Input Form -->
   <div class="log-form-box">
     <div style="font-size: 1.05rem; font-weight: 700; color: var(--primary-deep); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-      <span>✍️</span> Record Study Session & Practical Lab
+      <span class="badge badge-mint">Log</span> Record Study Session & Practical Lab
     </div>
     
     <div class="log-grid">
@@ -44,7 +44,7 @@
     </div>
 
     <div style="display: flex; justify-content: flex-end;">
-      <button class="btn btn-primary" onclick="addLearningLogEntry()">➕ Log Study Session</button>
+      <button class="btn btn-primary" onclick="addLearningLogEntry()">+ Log Study Session</button>
     </div>
   </div>
 
@@ -52,7 +52,7 @@
   <div class="sub-card">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
       <div class="sub-card-title" style="margin-bottom: 0;">
-        <span>📋</span> Verified Study Session History
+        Verified Study Session History
       </div>
       <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-medium);" id="log-total-summary">0 Sessions Logged (0.0 Hours)</span>
     </div>
@@ -86,25 +86,25 @@
 
   <div class="grid-2col">
     <div class="sub-card">
-      <div class="sub-card-title">📗 Phase 1 Notes: Root Cause Data & Interviews</div>
+      <div class="sub-card-title">Phase 1 Notes: Root Cause Data & Interviews</div>
       <textarea id="notes-phase-1" class="notes-textarea" placeholder="Record your observations on GSC data anomalies, 5 Whys findings, and user interview quotes..." onkeyup="savePhaseNotes('1')"></textarea>
       <div style="font-size: 0.75rem; color: var(--text-light); text-align: right; margin-top: 4px;" id="save-status-1">Auto-saved locally</div>
     </div>
 
     <div class="sub-card">
-      <div class="sub-card-title">📘 Phase 2 Notes: RICE Scores & Product Metrics</div>
+      <div class="sub-card-title">Phase 2 Notes: RICE Scores & Product Metrics</div>
       <textarea id="notes-phase-2" class="notes-textarea" placeholder="Document RICE trade-off justifications, metric tree sketches, and MVP scope exclusions..." onkeyup="savePhaseNotes('2')"></textarea>
       <div style="font-size: 0.75rem; color: var(--text-light); text-align: right; margin-top: 4px;" id="save-status-2">Auto-saved locally</div>
     </div>
 
     <div class="sub-card">
-      <div class="sub-card-title">📙 Phase 3 Notes: Heuristics & Experimentation Design</div>
+      <div class="sub-card-title">Phase 3 Notes: Heuristics & Experimentation Design</div>
       <textarea id="notes-phase-3" class="notes-textarea" placeholder="Capture usability friction points, wireframe annotations, and falsifiable SEO test ideas..." onkeyup="savePhaseNotes('3')"></textarea>
       <div style="font-size: 0.75rem; color: var(--text-light); text-align: right; margin-top: 4px;" id="save-status-3">Auto-saved locally</div>
     </div>
 
     <div class="sub-card">
-      <div class="sub-card-title">📕 Phase 4 Notes: Technical PRD & Capstone Case Study</div>
+      <div class="sub-card-title">Phase 4 Notes: Technical PRD & Capstone Case Study</div>
       <textarea id="notes-phase-4" class="notes-textarea" placeholder="Draft user stories, Given/When/Then acceptance scenarios, risk mitigations, and portfolio pitch..." onkeyup="savePhaseNotes('4')"></textarea>
       <div style="font-size: 0.75rem; color: var(--text-light); text-align: right; margin-top: 4px;" id="save-status-4">Auto-saved locally</div>
     </div>
@@ -121,8 +121,8 @@
   </div>
 
   <div class="callout callout-amber" style="margin-bottom: 24px;">
-    <div class="callout-icon">💡</div>
     <div>
+      <span class="badge badge-amber" style="margin-bottom: 6px; display: inline-block;">Evaluation Rubric</span><br>
       <strong>How Senior Product Leaders Actually Evaluate You:</strong> Product leaders do not care how many courses you attended. They look for <em>clarity of thought</em>, <em>comfort with data uncertainty</em>, and <em>humility in the face of customer feedback</em>. Evaluate your readiness across the 5 core proof points below.
     </div>
   </div>
@@ -200,7 +200,7 @@
   <!-- Re-framing Your SEO Experience -->
   <div class="sub-card sub-card-mint" style="margin-top: 28px;">
     <div class="sub-card-title">
-      <span>🚀</span> How to Reframe Your 2 Years of SEO Experience in PM Interviews
+      <span class="badge badge-mint" style="font-size: 0.72rem; margin-right: 8px;">Career Guide</span> How to Reframe Your 2 Years of SEO Experience in PM Interviews
     </div>
     <div class="table-responsive">
       <table class="data-table">
@@ -232,7 +232,7 @@
 <!-- RESET CONFIRMATION MODAL -->
 <div class="modal-overlay" id="reset-modal">
   <div class="modal-box">
-    <div class="modal-title">⚠️ Reset All Roadmap Progress?</div>
+    <div class="modal-title">Confirm Reset All Roadmap Progress</div>
     <p class="modal-desc">
       This will permanently clear your checked lessons, logged study hours, and saved phase notes from your browser's local storage. This action cannot be undone.
     </p>
