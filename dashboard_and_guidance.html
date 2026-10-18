@@ -1,0 +1,244 @@
+<!-- TAB 7: LEARNING LOG & PHASE NOTES -->
+<section id="tab-dashboard" class="content-section">
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">Personal Learning Log & Phase Notes</h2>
+      <p class="section-lead">Document your study sessions, track cumulative hours, and capture insights across each phase. Automatically persisted in local browser storage.</p>
+    </div>
+  </div>
+
+  <!-- Learning Log Input Form -->
+  <div class="log-form-box">
+    <div style="font-size: 1.05rem; font-weight: 700; color: var(--primary-deep); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+      <span>✍️</span> Record Study Session & Practical Lab
+    </div>
+    
+    <div class="log-grid">
+      <div>
+        <label style="display:block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-light); margin-bottom: 4px;">Date</label>
+        <input type="date" id="log-date" class="form-control">
+      </div>
+      <div>
+        <label style="display:block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-light); margin-bottom: 4px;">Competency / Milestone</label>
+        <select id="log-skill" class="form-control">
+          <option value="Comp 1: Data Analysis">Competency 1: Data Analysis & Problem Diagnosis</option>
+          <option value="Comp 2: User Research">Competency 2: User Research & Search Intent</option>
+          <option value="Comp 3: Prioritization">Competency 3: Prioritization & Strategic Thinking</option>
+          <option value="Comp 4: Metrics & KPIs">Competency 4: Metrics, KPIs & Product Analytics</option>
+          <option value="Comp 5: UX & CRO">Competency 5: UX & Conversion Rate Optimization</option>
+          <option value="Comp 6: Experimentation">Competency 6: Experimentation & Critical Thinking</option>
+          <option value="Comp 7: Technical PRD">Competency 7: Technical Requirements & Collaboration</option>
+          <option value="Capstone Project">AI Capstone Project Development</option>
+          <option value="English Practice">Professional English & Writing</option>
+        </select>
+      </div>
+      <div>
+        <label style="display:block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-light); margin-bottom: 4px;">Hours Studied</label>
+        <input type="number" id="log-hours" class="form-control" placeholder="e.g. 1.5" min="0.25" max="12" step="0.25">
+      </div>
+    </div>
+
+    <div style="margin-bottom: 14px;">
+      <label style="display:block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-light); margin-bottom: 4px;">Key Insight / Practical Takeaway</label>
+      <input type="text" id="log-insight" class="form-control" placeholder="What core mental model did you validate? What surprised you in the data or interview?">
+    </div>
+
+    <div style="display: flex; justify-content: flex-end;">
+      <button class="btn btn-primary" onclick="addLearningLogEntry()">➕ Log Study Session</button>
+    </div>
+  </div>
+
+  <!-- Log Entries Table -->
+  <div class="sub-card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+      <div class="sub-card-title" style="margin-bottom: 0;">
+        <span>📋</span> Verified Study Session History
+      </div>
+      <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-medium);" id="log-total-summary">0 Sessions Logged (0.0 Hours)</span>
+    </div>
+
+    <div class="table-responsive">
+      <table class="data-table" id="log-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Competency / Focus</th>
+            <th>Hours</th>
+            <th>Key Takeaway & Evidence</th>
+            <th style="width: 80px; text-align: center;">Action</th>
+          </tr>
+        </thead>
+        <tbody id="log-table-body">
+          <!-- Populated by JavaScript -->
+          <tr>
+            <td colspan="5" style="text-align: center; color: var(--text-light); padding: 24px;">No study sessions logged yet. Record your first lab above!</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Persistent Phase Notes -->
+  <h3 style="font-size: 1.25rem; color: var(--primary-deep); margin: 32px 0 14px 0;">Persistent Phase Reflection Notes</h3>
+  <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+    Use these dedicated reflection areas to draft thoughts, document blockers, and formulate ideas for your AI diagnostic tool. Edits auto-save immediately.
+  </p>
+
+  <div class="grid-2col">
+    <div class="sub-card">
+      <div class="sub-card-title">📗 Phase 1 Notes: Root Cause Data & Interviews</div>
+      <textarea id="notes-phase-1" class="notes-textarea" placeholder="Record your observations on GSC data anomalies, 5 Whys findings, and user interview quotes..." onkeyup="savePhaseNotes('1')"></textarea>
+      <div style="font-size: 0.75rem; color: var(--text-light); text-align: right; margin-top: 4px;" id="save-status-1">Auto-saved locally</div>
+    </div>
+
+    <div class="sub-card">
+      <div class="sub-card-title">📘 Phase 2 Notes: RICE Scores & Product Metrics</div>
+      <textarea id="notes-phase-2" class="notes-textarea" placeholder="Document RICE trade-off justifications, metric tree sketches, and MVP scope exclusions..." onkeyup="savePhaseNotes('2')"></textarea>
+      <div style="font-size: 0.75rem; color: var(--text-light); text-align: right; margin-top: 4px;" id="save-status-2">Auto-saved locally</div>
+    </div>
+
+    <div class="sub-card">
+      <div class="sub-card-title">📙 Phase 3 Notes: Heuristics & Experimentation Design</div>
+      <textarea id="notes-phase-3" class="notes-textarea" placeholder="Capture usability friction points, wireframe annotations, and falsifiable SEO test ideas..." onkeyup="savePhaseNotes('3')"></textarea>
+      <div style="font-size: 0.75rem; color: var(--text-light); text-align: right; margin-top: 4px;" id="save-status-3">Auto-saved locally</div>
+    </div>
+
+    <div class="sub-card">
+      <div class="sub-card-title">📕 Phase 4 Notes: Technical PRD & Capstone Case Study</div>
+      <textarea id="notes-phase-4" class="notes-textarea" placeholder="Draft user stories, Given/When/Then acceptance scenarios, risk mitigations, and portfolio pitch..." onkeyup="savePhaseNotes('4')"></textarea>
+      <div style="font-size: 0.75rem; color: var(--text-light); text-align: right; margin-top: 4px;" id="save-status-4">Auto-saved locally</div>
+    </div>
+  </div>
+</section>
+
+<!-- TAB 8: PM READINESS & CAREER EVALUATION -->
+<section id="tab-readiness" class="content-section">
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">Junior Product Manager Readiness Evaluation</h2>
+      <p class="section-lead">Objective assessment rubric based on demonstrated portfolio outputs rather than course completion certificates.</p>
+    </div>
+  </div>
+
+  <div class="callout callout-amber" style="margin-bottom: 24px;">
+    <div class="callout-icon">💡</div>
+    <div>
+      <strong>How Senior Product Leaders Actually Evaluate You:</strong> Product leaders do not care how many courses you attended. They look for <em>clarity of thought</em>, <em>comfort with data uncertainty</em>, and <em>humility in the face of customer feedback</em>. Evaluate your readiness across the 5 core proof points below.
+    </div>
+  </div>
+
+  <!-- The 5 Portfolio Proof Points -->
+  <div style="display: flex; flex-direction: column; gap: 16px;">
+
+    <div class="sub-card">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+        <div style="font-size: 1.05rem; font-weight: 700; color: var(--primary-deep);">1. Problem Framing Without Solution Bias</div>
+        <span class="badge badge-mint">Discovery Competency</span>
+      </div>
+      <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 8px;">
+        <strong>The Test:</strong> Can you articulate a real user frustration and its business cost without mentioning "AI", "software", or specific features for at least 10 minutes?
+      </p>
+      <div style="font-size: 0.82rem; background: var(--bg-subtle); padding: 8px 12px; border-radius: 6px;">
+        <strong>Your Portfolio Evidence:</strong> Artifact 1 (Problem Statement) and Artifact 2 (5 User Interview Transcripts with neutral non-leading questions).
+      </div>
+    </div>
+
+    <div class="sub-card">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+        <div style="font-size: 1.05rem; font-weight: 700; color: var(--primary-deep);">2. Diagnostic Rigor & Root Cause Isolation</div>
+        <span class="badge badge-mint">Analytical Competency</span>
+      </div>
+      <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 8px;">
+        <strong>The Test:</strong> When presented with a complex performance drop, do you jump to surface tweaks (rewriting meta tags) or do you segment data to isolate root causes?
+      </p>
+      <div style="font-size: 0.82rem; background: var(--bg-subtle); padding: 8px 12px; border-radius: 6px;">
+        <strong>Your Portfolio Evidence:</strong> Artifact 1 (Diagnostic Audit Report) and Artifact 6 (Deterministic Decision Framework ruling out seasonality and confounding updates).
+      </div>
+    </div>
+
+    <div class="sub-card">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+        <div style="font-size: 1.05rem; font-weight: 700; color: var(--primary-deep);">3. Strategic Prioritization & Defending "No"</div>
+        <span class="badge badge-mint">Strategy Competency</span>
+      </div>
+      <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 8px;">
+        <strong>The Test:</strong> Can you defend an explicit "Won't Have" list against an excited stakeholder using transparent mathematical scoring (RICE) and business trade-offs?
+      </p>
+      <div style="font-size: 0.82rem; background: var(--bg-subtle); padding: 8px 12px; border-radius: 6px;">
+        <strong>Your Portfolio Evidence:</strong> Artifact 4 (MVP Scope Exclusions) and Artifact 3 (Ranked Pain Points Matrix).
+      </div>
+    </div>
+
+    <div class="sub-card">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+        <div style="font-size: 1.05rem; font-weight: 700; color: var(--primary-deep);">4. Developer-Ready Technical Communication</div>
+        <span class="badge badge-mint">Delivery Competency</span>
+      </div>
+      <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 8px;">
+        <strong>The Test:</strong> Can a senior software engineer read your ticket without asking 10 basic clarification questions about edge cases, error states, and expected outputs?
+      </p>
+      <div style="font-size: 0.82rem; background: var(--bg-subtle); padding: 8px 12px; border-radius: 6px;">
+        <strong>Your Portfolio Evidence:</strong> Artifact 8 (Lightweight PRD with Given/When/Then acceptance criteria and Definition of Done).
+      </div>
+    </div>
+
+    <div class="sub-card">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+        <div style="font-size: 1.05rem; font-weight: 700; color: var(--primary-deep);">5. Scientific Experimentation & Causal Attribution</div>
+        <span class="badge badge-mint">Critical Thinking</span>
+      </div>
+      <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 8px;">
+        <strong>The Test:</strong> Do you recognize that before-and-after graphs are not scientific proof of success, and can you design controlled tests that account for confounding variables?
+      </p>
+      <div style="font-size: 0.82rem; background: var(--bg-subtle); padding: 8px 12px; border-radius: 6px;">
+        <strong>Your Portfolio Evidence:</strong> Artifact 10 (AI Backtesting Plan) and Artifact 11 (Trust & Safety Risk Register).
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Re-framing Your SEO Experience -->
+  <div class="sub-card sub-card-mint" style="margin-top: 28px;">
+    <div class="sub-card-title">
+      <span>🚀</span> How to Reframe Your 2 Years of SEO Experience in PM Interviews
+    </div>
+    <div class="table-responsive">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>How Junior SEOs Describe Themselves</th>
+            <th>How Product Leaders Want to Hear It (The Reframe)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"I optimized title tags and meta descriptions to improve Google rankings."</td>
+            <td>"I analyzed search query intent distributions to conduct low-cost behavioral discovery, formulating copy hypotheses that increased SERP click-through rates by 22%."</td>
+          </tr>
+          <tr>
+            <td>"I ran Screaming Frog crawls and fixed 404 links and duplicate canonicals."</td>
+            <td>"I diagnosed technical system health and crawl efficiency bottlenecks, prioritizing engineering tickets with testable acceptance criteria to protect indexation integrity."</td>
+          </tr>
+          <tr>
+            <td>"I built Looker Studio dashboards tracking keyword positions."</td>
+            <td>"I architected metric trees connecting leading search demand indicators to customer acquisition pipelines, eliminating vanity rank metrics from executive reviews."</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- RESET CONFIRMATION MODAL -->
+<div class="modal-overlay" id="reset-modal">
+  <div class="modal-box">
+    <div class="modal-title">⚠️ Reset All Roadmap Progress?</div>
+    <p class="modal-desc">
+      This will permanently clear your checked lessons, logged study hours, and saved phase notes from your browser's local storage. This action cannot be undone.
+    </p>
+    <div class="modal-actions">
+      <button class="btn btn-outline btn-sm" onclick="closeResetModal()">Cancel</button>
+      <button class="btn btn-danger-outline btn-sm" onclick="confirmResetProgress()">Yes, Reset Everything</button>
+    </div>
+  </div>
+</div>

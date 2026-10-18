@@ -1,0 +1,308 @@
+<!-- Sticky Top Navigation -->
+<header class="sticky-header">
+  <div class="nav-inner">
+    <div class="brand-wrapper">
+      <div class="brand-icon">⚡</div>
+      <div>
+        <div class="brand-title">SEO ➔ Product Management</div>
+        <div class="brand-subtitle">The Dual-Competency & AI Product Roadmap</div>
+      </div>
+    </div>
+    
+    <nav class="nav-tabs" role="tablist">
+      <button class="nav-tab-btn active" data-tab="tab-overview" role="tab">🧭 Orientation</button>
+      <button class="nav-tab-btn" data-tab="tab-roadmap" role="tab">🗺️ 12-Week Roadmap</button>
+      <button class="nav-tab-btn" data-tab="tab-competencies" role="tab">🧠 7 Competencies</button>
+      <button class="nav-tab-btn" data-tab="tab-capstone" role="tab">🚀 AI Capstone (MVP)</button>
+      <button class="nav-tab-btn" data-tab="tab-resources" role="tab">📚 Verified Resources</button>
+      <button class="nav-tab-btn" data-tab="tab-english" role="tab">🗣️ Professional English</button>
+      <button class="nav-tab-btn" data-tab="tab-dashboard" role="tab">📝 Log & Notes</button>
+      <button class="nav-tab-btn" data-tab="tab-readiness" role="tab">🎯 PM Readiness</button>
+    </nav>
+    
+    <div class="nav-metrics">
+      <div class="mini-progress-pill">
+        <span id="nav-progress-text">0% Done</span>
+        <div class="mini-bar">
+          <div class="mini-bar-fill" id="nav-progress-bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="app-container">
+
+  <!-- Hero Section -->
+  <section class="hero-card">
+    <div class="badge-row">
+      <span class="badge badge-mint">12-Week Career Accelerator</span>
+      <span class="badge badge-outline">SEO Strategist ➔ Product Manager</span>
+      <span class="badge badge-mint">AI Diagnostic Assistant MVP</span>
+      <span class="badge badge-outline">5–7 Hours / Week</span>
+    </div>
+    
+    <h1 class="hero-title">SEO to Product Management: The Dual-Competency Roadmap</h1>
+    <p class="hero-desc">
+      A structured, evidence-based instructional framework designed to elevate your technical SEO diagnostics into strategic product leadership. Master the 7 shared competencies, build a validated AI-powered SEO diagnostic MVP, and assemble a portfolio that proves your analytical problem-solving to senior product teams.
+    </p>
+    
+    <!-- Profile Alignment Box -->
+    <div class="profile-box">
+      <div class="profile-item">
+        <div class="profile-icon">🎯</div>
+        <div>
+          <div class="profile-label">Learner Profile</div>
+          <div class="profile-value">2 Years SEO Experience, GSC Practitioner, Analytical Thinker</div>
+        </div>
+      </div>
+      <div class="profile-item">
+        <div class="profile-icon">💡</div>
+        <div>
+          <div class="profile-label">Target AI Product</div>
+          <div class="profile-value">Search Console Root-Cause Diagnostic & Pattern Assistant</div>
+        </div>
+      </div>
+      <div class="profile-item">
+        <div class="profile-icon">📈</div>
+        <div>
+          <div class="profile-label">Dual Objective</div>
+          <div class="profile-value">Excel in Senior SEO while systematically preparing for PM transition</div>
+        </div>
+      </div>
+      <div class="profile-item">
+        <div class="profile-icon">⏱️</div>
+        <div>
+          <div class="profile-label">Realistic Study Load</div>
+          <div class="profile-value">12 Weeks • 5–7 Hours Weekly • 4 Progressive Phases</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Top Global Metrics -->
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-header">
+          <span class="metric-name">Overall Completion</span>
+          <span style="font-size: 1.1rem;">📊</span>
+        </div>
+        <div class="metric-val" id="global-progress-percent">0%</div>
+        <div class="progress-track">
+          <div class="progress-fill" id="global-progress-fill"></div>
+        </div>
+        <div class="metric-sub" id="global-progress-ratio">0 of 48 Tasks Completed</div>
+      </div>
+      
+      <div class="metric-card">
+        <div class="metric-header">
+          <span class="metric-name">Portfolio Artifacts</span>
+          <span style="font-size: 1.1rem;">📁</span>
+        </div>
+        <div class="metric-val" id="artifacts-completed-count">0 / 12</div>
+        <div class="progress-track">
+          <div class="progress-fill" id="artifacts-progress-fill"></div>
+        </div>
+        <div class="metric-sub">Verified Portfolio Proofs</div>
+      </div>
+      
+      <div class="metric-card">
+        <div class="metric-header">
+          <span class="metric-name">Study Time Logged</span>
+          <span style="font-size: 1.1rem;">⏱️</span>
+        </div>
+        <div class="metric-val" id="hours-logged-display">0.0 hrs</div>
+        <div class="progress-track">
+          <div class="progress-fill" id="hours-progress-fill" style="width: 0%;"></div>
+        </div>
+        <div class="metric-sub">Target: ~72 Hours Total</div>
+      </div>
+      
+      <div class="metric-card">
+        <div class="metric-header">
+          <span class="metric-name">Current Milestone</span>
+          <span style="font-size: 1.1rem;">🏆</span>
+        </div>
+        <div class="metric-val" style="font-size: 1.3rem; padding-top: 4px;" id="current-phase-display">Phase 1: Discovery</div>
+        <div class="metric-sub">Weeks 1–3: Diagnostic Rigor</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Action Toolbar -->
+  <div class="action-toolbar">
+    <div class="toolbar-left">
+      <button class="btn btn-outline btn-sm" id="btn-expand-all">📂 Expand All Lessons</button>
+      <button class="btn btn-outline btn-sm" id="btn-collapse-all">📁 Collapse All</button>
+      <button class="btn btn-outline btn-sm" id="btn-export-data">📥 Export Notes & Progress (JSON)</button>
+      <button class="btn btn-outline btn-sm" id="btn-print-view">🖨️ Print / Save as PDF</button>
+    </div>
+    <div class="toolbar-right">
+      <span id="storage-status-indicator" style="font-size: 0.78rem; color: var(--text-light); font-weight: 500;">
+        🟢 Local Storage Active
+      </span>
+      <button class="btn btn-danger-outline btn-sm" id="btn-reset-modal">⚠️ Reset Progress</button>
+    </div>
+  </div>
+
+  <!-- TAB 1: ORIENTATION & METHODOLOGY -->
+  <section id="tab-overview" class="content-section active">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">Program Orientation & Mentorship Framework</h2>
+        <p class="section-lead">Instructional principles, prerequisite relationships, weekly routine, and career realities.</p>
+      </div>
+    </div>
+
+    <!-- Mentor Welcome & Strategic Philosophy -->
+    <div class="grid-2col">
+      <div class="sub-card sub-card-mint">
+        <div class="sub-card-title">
+          <span>🎯</span> The "T-Shaped" SEO to PM Advantage
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 12px;">
+          Many professionals attempt to transition to Product Management by starting from zero with generic MBA frameworks. This is a strategic mistake. With two years of SEO experience, you already possess high-leverage product superpowers:
+        </p>
+        <ul style="font-size: 0.86rem; color: var(--text-main); padding-left: 20px; line-height: 1.6;">
+          <li><strong>Quantitative Funnel Intuition:</strong> You understand search impressions, click-through curves, and landing page drop-offs better than most junior PMs.</li>
+          <li><strong>Deep User Intent Empathy:</strong> You analyze search queries—which are raw expressions of human problems, hesitations, and customer intent.</li>
+          <li><strong>Algorithmic Systems Thinking:</strong> You diagnose how black-box algorithms respond to inputs, site architecture, and quality signals.</li>
+        </ul>
+        <p style="font-size: 0.86rem; color: var(--text-muted); margin-top: 10px;">
+          This roadmap bridges your technical depth with product strategy, customer discovery, rigorous prioritization, and cross-functional leadership.
+        </p>
+      </div>
+
+      <div class="sub-card">
+        <div class="sub-card-title">
+          <span>⚠️</span> Career Reality Check: Honesty Over Hype
+        </div>
+        <div class="callout callout-amber" style="margin: 0 0 12px 0; padding: 10px 14px;">
+          <div class="callout-icon">💡</div>
+          <div style="font-size: 0.82rem;">
+            <strong>Important Reality:</strong> Completing this roadmap, watching tutorials, or checking boxes does <em>not</em> automatically entitle or qualify anyone for a Product Manager job.
+          </div>
+        </div>
+        <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6;">
+          Hiring managers do not hire course certificates; they hire <strong>demonstrated problem-solvers</strong>. You qualify for product roles by showing <em>tangible artifacts</em>: sharp root-cause diagnostic reports, rigorous user research notes, clear PRDs with testable acceptance criteria, and a validated prototype of your AI SEO diagnostic tool. Treat this roadmap as a rigorous laboratory, not a passive textbook.
+        </p>
+      </div>
+    </div>
+
+    <!-- Weekly Routine & Time Allocation -->
+    <div class="sub-card" style="margin-top: 20px;">
+      <div class="sub-card-title">
+        <span>📅</span> Recommended Weekly Learning Routine (5–7 Hours)
+      </div>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+        Sustainable professional skill acquisition requires a predictable rhythm balancing conceptual ingestion, active problem-solving, and reflective synthesis.
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
+        <div style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 14px;">
+          <div style="font-size: 0.78rem; font-weight: 800; color: var(--primary-medium); text-transform: uppercase;">Monday (1.5 Hours)</div>
+          <div style="font-size: 0.95rem; font-weight: 700; color: var(--primary-deep); margin: 4px 0 8px 0;">Theory & Official Docs</div>
+          <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">
+            Read Tier 1 documentation (Google Search Central, Atlassian Guides, NN/g). Take structured bullet notes on core mental models.
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 14px;">
+          <div style="font-size: 0.78rem; font-weight: 800; color: var(--primary-medium); text-transform: uppercase;">Wednesday (1.5 Hours)</div>
+          <div style="font-size: 0.95rem; font-weight: 700; color: var(--primary-deep); margin: 4px 0 8px 0;">Video & Case Breakdown</div>
+          <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">
+            Study curated YouTube training modules (Daniel Waisberg GSC series, Amplitude Playbooks). Dissect real-world examples and frameworks.
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 14px;">
+          <div style="font-size: 0.78rem; font-weight: 800; color: var(--primary-medium); text-transform: uppercase;">Friday (2.0 Hours)</div>
+          <div style="font-size: 0.95rem; font-weight: 700; color: var(--primary-deep); margin: 4px 0 8px 0;">Hands-On Lab & Exercises</div>
+          <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">
+            Execute practical assignments: clean real GSC exports, write user interview questions, prioritize backlogs, or draft PRD sections.
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 14px;">
+          <div style="font-size: 0.78rem; font-weight: 800; color: var(--primary-medium); text-transform: uppercase;">Sunday (1.0–1.5 Hours)</div>
+          <div style="font-size: 0.95rem; font-weight: 700; color: var(--primary-deep); margin: 4px 0 8px 0;">Artifact & English Reflection</div>
+          <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">
+            Polish your weekly deliverable artifact. Complete the English vocabulary and stakeholder writing exercise. Log your reflection in the personal dashboard.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Prerequisite Relationships Diagram & Explanation -->
+    <div class="sub-card" style="margin-top: 20px;">
+      <div class="sub-card-title">
+        <span>🔗</span> Prerequisite Relationships Between the 7 Competencies
+      </div>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+        These competencies are not isolated silos. Each skill provides the foundational inputs for the next:
+      </p>
+      <div style="background: #ffffff; border: 1px solid var(--mint-border); border-radius: var(--radius-md); padding: 18px; line-height: 1.6; font-size: 0.86rem;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div>
+            <strong style="color: var(--primary-deep);">1. Data Analysis & Problem Diagnosis</strong> ➔ <em>Foundational Input</em><br>
+            <span style="color: var(--text-muted);">You cannot solve a user problem until you can distinguish symptoms from root causes in Search Console and behavioral data.</span>
+          </div>
+          <div style="padding-left: 12px; border-left: 2px solid var(--mint-border);">
+            <strong style="color: var(--primary-deep);">2. User Research & Search Intent</strong> ➔ <em>Problem Space Discovery</em><br>
+            <span style="color: var(--text-muted);">Data tells you <strong>where</strong> performance changed; qualitative research and search intent reveal <strong>why</strong> human users behave this way.</span>
+          </div>
+          <div style="padding-left: 24px; border-left: 2px solid var(--mint-border);">
+            <strong style="color: var(--primary-deep);">3. Prioritization & Strategic Thinking</strong> ➔ <em>Focus & Resource Allocation</em><br>
+            <span style="color: var(--text-muted);">You will discover dozens of problems. Strategic thinking and RICE scoring prevent you from wasting engineering capacity on low-impact fixes.</span>
+          </div>
+          <div style="padding-left: 36px; border-left: 2px solid var(--mint-border);">
+            <strong style="color: var(--primary-deep);">4. Metrics, KPIs & Product Analytics</strong> ➔ <em>Target & Measurement Definition</em><br>
+            <span style="color: var(--text-muted);">Once focus is chosen, you define input metrics and a North Star to monitor genuine progress instead of chasing vanity rankings.</span>
+          </div>
+          <div style="padding-left: 48px; border-left: 2px solid var(--mint-border);">
+            <strong style="color: var(--primary-deep);">5. UX & Conversion Rate Optimization</strong> ➔ <em>Solution Space Design</em><br>
+            <span style="color: var(--text-muted);">Organic clicks must translate into value. Designing seamless user journeys and clear interface states eliminates bounce friction.</span>
+          </div>
+          <div style="padding-left: 60px; border-left: 2px solid var(--mint-border);">
+            <strong style="color: var(--primary-deep);">6. Experimentation & Critical Thinking</strong> ➔ <em>Validation & Falsification</em><br>
+            <span style="color: var(--text-muted);">Before rolling out site-wide changes or AI models, you formulate falsifiable hypotheses and isolate confounding algorithm updates.</span>
+          </div>
+          <div style="padding-left: 72px; border-left: 2px solid var(--mint-border);">
+            <strong style="color: var(--primary-deep);">7. Technical Communication & PRDs</strong> ➔ <em>Execution & Engineering Delivery</em><br>
+            <span style="color: var(--text-muted);">The culmination: translating validated insights into unambiguous user stories, acceptance criteria, and data requirements for developers.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recovery Protocol & Ongoing Practice Notes -->
+    <div class="grid-2col" style="margin-top: 20px;">
+      <div class="sub-card">
+        <div class="sub-card-title">
+          <span>⏱️</span> What to Do If You Fall Behind: The 3-Tier Recovery Protocol
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 10px;">
+          Life and work emergencies happen. Do not abandon the roadmap when you miss a week. Execute this protocol:
+        </p>
+        <ol style="font-size: 0.84rem; color: var(--text-main); padding-left: 18px; line-height: 1.6;">
+          <li><strong>Tier 1: Prune Optional Resources:</strong> Immediately drop Tier 2 secondary readings and focus exclusively on the mandatory Tier 1 official doc and practical lab.</li>
+          <li><strong>Tier 2: Compress the Artifact:</strong> Produce a 1-page structured bulleted brief instead of a multi-page report. Core logic matters more than aesthetic polish.</li>
+          <li><strong>Tier 3: The 1-Week Buffer Rule:</strong> Week 12 is intentionally structured with consolidation time. You can absorb up to 7 days of slip without extending the overall calendar.</li>
+        </ol>
+      </div>
+
+      <div class="sub-card">
+        <div class="sub-card-title">
+          <span>🌱</span> "Ongoing Practice" vs "Initial Competence"
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 10px;">
+          Instructional design integrity requires transparency about learning curves:
+        </p>
+        <ul style="font-size: 0.84rem; color: var(--text-main); padding-left: 18px; line-height: 1.6;">
+          <li><strong>Achievable in 12 Weeks:</strong> Strong diagnostic mental models, structured user interviewing, RICE prioritization, PRD authoring, and designing an AI product MVP.</li>
+          <li><strong>Requires Ongoing Practice (6–18 Months):</strong> Advanced SQL window functions, statistical causal inference in complex A/B tests, and production AI latency/infrastructure tuning.</li>
+        </ul>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 8px;">
+          We flag these technical areas as continuous lifelong development rather than falsely promising instant mastery.
+        </p>
+      </div>
+    </div>
+  </section>

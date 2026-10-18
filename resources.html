@@ -1,0 +1,422 @@
+<!-- TAB 5: VERIFIED RESOURCE LIBRARY -->
+<section id="tab-resources" class="content-section">
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">Verified Learning Resource Library</h2>
+      <p class="section-lead">Curated, strictly authenticated learning materials from Tier 1 official sources and Tier 2 verified industry leaders.</p>
+    </div>
+    <div style="font-size: 0.85rem; color: var(--text-light); font-weight: 600;" id="res-counter-display">
+      Showing 23 Verified Resources
+    </div>
+  </div>
+
+  <!-- Resource Search and Multi-Facet Filter Toolbar -->
+  <div class="resource-filters-box">
+    <div class="filters-grid">
+      <div class="filter-group">
+        <label for="res-search">🔍 Search Resources</label>
+        <input type="text" id="res-search" class="form-control" placeholder="Search by title, publisher, concept, or tool..." onkeyup="filterResources()">
+      </div>
+
+      <div class="filter-group">
+        <label for="filter-skill">Competency</label>
+        <select id="filter-skill" class="form-control" onchange="filterResources()">
+          <option value="all">All Competencies</option>
+          <option value="data">1. Data Analysis & Diagnosis</option>
+          <option value="research">2. User Research & Intent</option>
+          <option value="priority">3. Prioritization & Strategy</option>
+          <option value="metrics">4. Metrics & Analytics</option>
+          <option value="ux">5. UX & CRO</option>
+          <option value="experiment">6. Experimentation</option>
+          <option value="tech">7. Technical & PRDs</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="filter-type">Format</label>
+        <select id="filter-type" class="form-control" onchange="filterResources()">
+          <option value="all">All Formats</option>
+          <option value="documentation">Documentation</option>
+          <option value="article">Article / Guide</option>
+          <option value="video">Video / Playlist</option>
+          <option value="course">Course / Interactive</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="filter-difficulty">Difficulty</label>
+        <select id="filter-difficulty" class="form-control" onchange="filterResources()">
+          <option value="all">All Difficulties</option>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resources Grid Container -->
+  <div class="resource-list" id="resource-container">
+
+    <!-- RES 1 -->
+    <div class="res-card" data-skill="data" data-type="documentation" data-diff="intermediate" data-tier="tier1" data-search="google search central debugging drops traffic console algorithm penalty technical">
+      <div class="res-top">
+        <div class="res-badges">
+          <span class="res-pill pill-tier1">Tier 1: Official</span>
+          <span class="res-pill pill-format">Documentation</span>
+          <span class="res-pill pill-free">Free</span>
+          <span class="res-pill" style="background:#f1f5f9; color:#475569;">Intermediate</span>
+        </div>
+        <h4 class="res-title">Debugging drops in Google Search traffic</h4>
+        <div class="res-author">Google Search Central • Official Guide</div>
+        <p class="res-desc">
+          Official Google guide on analyzing traffic drop shapes (cliff, slope, step), segmenting by query and page, and eliminating false alarms from reporting glitches.
+        </p>
+        <div class="res-outcome">
+          <strong>Outcome:</strong> Ability to classify drop geometries and formulate evidence-based root cause hypotheses.
+        </div>
+      </div>
+      <div class="res-footer">
+        <span class="res-meta-time">⏱️ 1.5 Hours</span>
+        <a href="https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops" target="_blank" class="btn btn-outline btn-sm">Read Official Guide ↗</a>
+      </div>
+    </div>
+
+    <!-- RES 2 -->
+    <div class="res-card" data-skill="data" data-type="documentation" data-diff="beginner" data-tier="tier1" data-search="google search console help performance report clicks impressions ctr average position">
+      <div class="res-top">
+        <div class="res-badges">
+          <span class="res-pill pill-tier1">Tier 1: Official</span>
+          <span class="res-pill pill-format">Documentation</span>
+          <span class="res-pill pill-free">Free</span>
+          <span class="res-pill" style="background:#f1f5f9; color:#475569;">Beginner</span>
+        </div>
+        <h4 class="res-title">Performance Report (Search)</h4>
+        <div class="res-author">Google Search Console Help • Official Documentation</div>
+        <p class="res-desc">
+          Definitive definitions of Impressions, Clicks, Click-Through Rate (CTR), and Average Position. Details data thresholds, anonymized queries, and time delays.
+        </p>
+        <div class="res-outcome">
+          <strong>Outcome:</strong> Clear understanding of Search Console logging limits and multi-metric dynamics.
+        </div>
+      </div>
+      <div class="res-footer">
+        <span class="res-meta-time">⏱️ 1.0 Hour</span>
+        <a href="https://support.google.com/webmasters/answer/75765" target="_blank" class="btn btn-outline btn-sm">Read Help Doc ↗</a>
+      </div>
+    </div>
+
+    <!-- RES 3 -->
+    <div class="res-card" data-skill="data" data-type="video" data-diff="intermediate" data-tier="tier1" data-search="google search console training daniel waisberg youtube video performance coverage">
+      <div class="res-top">
+        <div class="res-badges">
+          <span class="res-pill pill-tier1">Tier 1: Official</span>
+          <span class="res-pill pill-format">Video Playlist</span>
+          <span class="res-pill pill-free">Free</span>
+          <span class="res-pill" style="background:#f1f5f9; color:#475569;">Intermediate</span>
+        </div>
+        <h4 class="res-title">Search Console Training with Daniel Waisberg</h4>
+        <div class="res-author">Google Search Central • Official YouTube Series</div>
+        <p class="res-desc">
+          Official video masterclass hosted by Google Search Advocate Daniel Waisberg covering performance analysis, indexing coverage, URL inspections, and sitemaps.
+        </p>
+        <div class="res-outcome">
+          <strong>Outcome:</strong> Practical confidence navigating advanced Search Console filters, regex queries, and data exports.
+        </div>
+      </div>
+      <div class="res-footer">
+        <span class="res-meta-time">⏱️ 3.0 Hours</span>
+        <a href="https://www.youtube.com/playlist?list=PLIFsF79cQFALFH9oiLNkoQTmwT8JtGRoo" target="_blank" class="btn btn-outline btn-sm">Watch YouTube Series ↗</a>
+      </div>
+    </div>
+
+    <!-- RES 4 -->
+    <div class="res-card" data-skill="research" data-type="article" data-diff="beginner" data-tier="tier1" data-search="nielsen norman group user interviews 101 qualitative customer discovery non leading questions">
+      <div class="res-top">
+        <div class="res-badges">
+          <span class="res-pill pill-tier1">Tier 1: Official</span>
+          <span class="res-pill pill-format">Article / Guide</span>
+          <span class="res-pill pill-free">Free</span>
+          <span class="res-pill" style="background:#f1f5f9; color:#475569;">Beginner</span>
+        </div>
+        <h4 class="res-title">User Interviews 101</h4>
+        <div class="res-author">Nielsen Norman Group • UX Research Standard</div>
+        <p class="res-desc">
+          Authoritative methodology on designing qualitative discovery interview guides, asking neutral non-leading questions, and establishing rapport with users.
+        </p>
+        <div class="res-outcome">
+          <strong>Outcome:</strong> Author an objective interview script to discover real practitioner workflows without bias.
+        </div>
+      </div>
+      <div class="res-footer">
+        <span class="res-meta-time">⏱️ 1.5 Hours</span>
+        <a href="https://www.nngroup.com/articles/user-interviews/" target="_blank" class="btn btn-outline btn-sm">Read NN/g Guide ↗</a>
+      </div>
+    </div>
+
+    <!-- RES 5 -->
+    <div class="res-card" data-skill="research" data-type="video" data-diff="beginner" data-tier="tier2" data-search="clayton christensen jobs to be done jtbd theory innovation harvard business school">
+      <div class="res-top">
+        <div class="res-badges">
+          <span class="res-pill pill-tier2">Tier 2: Industry Leader</span>
+          <span class="res-pill pill-format">Video / Case</span>
+          <span class="res-pill pill-free">Free</span>
+          <span class="res-pill" style="background:#f1f5f9; color:#475569;">Beginner</span>
+        </div>
+        <h4 class="res-title">The Jobs-to-be-Done Theory of Innovation</h4>
+        <div class="res-author">Prof. Clayton Christensen • Harvard Business School</div>
+        <p class="res-desc">
+          The foundational lecture explaining why customers do not buy products; they hire them to make specific progress in a given circumstance (The Milkshake Case).
+        </p>
+        <div class="res-outcome">
+          <strong>Outcome:</strong> Ability to define product features as customer progress jobs rather than isolated technical tools.
+        </div>
+      </div>
+      <div class="res-footer">
+        <span class="res-meta-time">⏱️ 1.0 Hour</span>
+        <a href="https://hbswk.hbs.edu/item/clay-christensen-the-jobs-to-be-done-theory-of-innovation" target="_blank" class="btn btn-outline btn-sm">Watch Case Lecture ↗</a>
+      </div>
+    </div>
+
+    <!-- RES 6 -->
+    <div class="res-card" data-skill="priority" data-type="article" data-diff="intermediate" data-tier="tier1" data-search="atlassian agile coach product prioritization frameworks value effort kano backlog">
+      <div class="res-top">
+        <div class="res-badges">
+          <span class="res-pill pill-tier1">Tier 1: Official</span>
+          <span class="res-pill pill-format">Article / Guide</span>
+          <span class="res-pill pill-free">Free</span>
+          <span class="res-pill" style="background:#f1f5f9; color:#475569;">Intermediate</span>
+        </div>
+        <h4 class="res-title">Product Prioritization Frameworks</h4>
+        <div class="res-author">Atlassian Agile Coach • Official Guide</div>
+        <p class="res-desc">
+          Comprehensive guide comparing Value vs Effort matrices, Kano analysis, MoSCoW, and story mapping to systematically organize product roadmaps.
+        </p>
+        <div class="res-outcome">
+          <strong>Outcome:</strong> Mathematical discipline in ranking engineering tasks and pruning bloated backlogs.
+        </div>
+      </div>
+      <div class="res-footer">
+        <span class="res-meta-time">⏱️ 1.5 Hours</span>
+        <a href="https://www.atlassian.com/agile/product-management/prioritization" target="_blank" class="btn btn-outline btn-sm">Read Atlassian Guide ↗</a>
+      </div>
+    </div>
+
+    <!-- RES 7 -->
+    <div class="res-card" data-skill="priority" data-type="article" data-diff="beginner" data-tier="tier1" data-search="intercom rice simple prioritization product managers sean mcbride reach impact confidence effort">
+      <div class="res-top">
+        <div class="res-badges">
+          <span class="res-pill pill-tier1">Tier 1: Authoritative</span>
+          <span class="res-pill pill-format">Article</span>
+          <span class="res-pill pill-free">Free</span>
+          <span class="res-pill" style="background:#f1f5f9; color:#475569;">Beginner</span>
+        </div>
+        <h4 class="res-title">RICE: Simple Prioritization for Product Managers</h4>
+        <div class="res-author">Sean McBride • Intercom Product Blog</div>
+        <p class="res-desc">
+          The original publication introducing the RICE scoring model: Reach, Impact, Confidence, and Effort. Explains how confidence scoring curbs wishful thinking.
+        </p>
+        <div class="res-outcome">
+          <strong>Outcome:</strong> Build automated RICE calculators and defend prioritization decisions to senior stakeholders.
+        </div>
+      </div>
+      <div class="res-footer">
+        <span class="res-meta-time">⏱️ 1.0 Hour</span>
+        <a href="https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/" target="_blank" class="btn btn-outline btn-sm">Read Intercom Article ↗</a>
+      </div>
+    </div>
+
+    <!-- RES 8 -->
+    <div class="res-card" data-skill="metrics" data-type="article" data-diff="intermediate" data-tier="tier1" data-search="amplitude north star playbook john cutler metric tree input indicators retention">
+      <div class="res-top">
+        <div class="res-badges">
+          <span class="res-pill pill-tier1">Tier 1: Authoritative</span>
+          <span class="res-pill pill-format">Article / Guide</span>
+          <span class="res-pill pill-free">Free</span>
+          <span class="res-pill" style="background:#f1f5f9; color:#475569;">Intermediate</span>
+        </div>
+        <h4 class="res-title">The North Star Playbook</h4>
+        <div class="res-author">John Cutler & Amplitude Product Team</div>
+        <p class="res-desc">
+          The definitive playbook on crafting a true North Star Metric, establishing leading input metrics, and avoiding vanity metrics that deceive management.
+        </p>
+        <div class="res-outcome">
+          <strong>Outcome:</strong> Architect a robust KPI tree connecting user diagnostic satisfaction to business sustainability.
+        </div>
+      </div>
+      <div class="res-footer">
+        <span class="res-meta-time">⏱️ 2.5 Hours</span>
+        <a href="https://amplitude.com/north-star-playbook" target="_blank" class="btn btn-outline btn-sm">Read Amplitude Playbook ↗</a>
+      </div>
+    </div>
+
+    <!-- RES 9 -->
+    <div class="res-card" data-skill="metrics" data-type="article" data-diff="advanced" data-tier="tier1" data-search="amplitude mastering retention playbook cohort analysis retention curves product analytics">
+      <div class="res-top">
+        <div class="res-badges">
+          <span class="res-pill pill-tier1">Tier 1: Authoritative</span>
+          <span class="res-pill pill-format">Article / Guide</span>
+          <span class="res-pill pill-free">Free</span>
+          <span class="res-pill" style="background:#f1f5f9; color:#475569;">Advanced</span>
+        </div>
+        <h4 class="res-title">Mastering Retention: Product Analytics Playbook</h4>
+        <div class="res-author">Amplitude Product Analytics</div>
+        <p class="res-desc">
+          Comprehensive guide to measuring and improving user retention, interpreting cohort curves, finding the "Aha! moment," and optimizing the core user lifecycle.
+        </p>
+        <div class="res-outcome">
+          <strong>Outcome:</strong> Build cohort analysis frameworks to measure if users return to your product after day 1.
+        </div>
+      </div>
+      <div class="res-footer">
+        <span class="res-meta-time">⏱️ 3.0 Hours</span>
+        <a href="https://amplitude.com/mastering-retention" target="_blank" class="btn btn-outline btn-sm">Read Playbook ↗</a>
+      </div>
+    </div>
+
+    <!-- RES 10 -->
+    <div class="res-card" data-skill="metrics" data-type="course" data-diff="intermediate" data-tier="tier1" data-search="google analytics 4 certification skillshop ga4 event tracking exploration funnels">
+      <div class="res-top">
+        <div class="res-badges">
+          <span class="res-pill pill-tier1">Tier 1: Official</span>
+          <span class="res-pill pill-format">Interactive Course</span>
+          <span class="res-pill pill-free">Free</span>
+          <span class="res-pill" style="background:#f1f5f9; color:#475569;">Intermediate</span>
+        </div>
+        <h4 class="res-title">Google Analytics 4 Certification Course</h4>
+        <div class="res-author">Google Skillshop • Official Training</div>
+        <p class="res-desc">
+          Official self-paced curriculum covering GA4’s event-driven data model, funnel exploration reports, audience segments, and conversion tracking.
+        </p>
+        <div class="res-outcome">
+          <strong>Outcome:</strong> Configure event-based telemetry and build multi-step funnel drop-off reports.
+        </div>
+      </div>
+      <div class="res-footer">
+        <span class="res-meta-time">⏱️ 4.5 Hours</span>
+        <a href="https://skillshop.exceedlms.com/student/path/508845-google-analytics-certification" target="_blank" class="btn btn-outline btn-sm">Enroll on Skillshop ↗</a>
+      </div>
+    </div>
+
+    <!-- RES 11 -->
+    <div class="res-card" data-skill="ux" data-type="article" data-diff="beginner" data-tier="tier1" data-search="nielsen norman group usability testing 101 heuristic evaluation cognitive load">
+      <div class="res-top">
+        <div class="res-badges">
+          <span class="res-pill pill-tier1">Tier 1: Official</span>
+          <span class="res-pill pill-format">Article / Guide</span>
+          <span class="res-pill pill-free">Free</span>
+          <span class="res-pill" style="background:#f1f5f9; color:#475569;">Beginner</span>
+        </div>
+        <h4 class="res-title">Usability Testing 101</h4>
+        <div class="res-author">Nielsen Norman Group • UX Authority</div>
+        <p class="res-desc">
+          Essential breakdown of qualitative usability evaluation, finding interface friction points, observing user behavior, and iterating before development.
+        </p>
+        <div class="res-outcome">
+          <strong>Outcome:</strong> Conduct structured heuristic audits to eliminate drop-off points in web landing pages.
+        </div>
+      </div>
+      <div class="res-footer">
+        <span class="res-meta-time">⏱️ 1.5 Hours</span>
+        <a href="https://www.nngroup.com/articles/usability-testing-101/" target="_blank" class="btn btn-outline btn-sm">Read Usability 101 ↗</a>
+      </div>
+    </div>
+
+    <!-- RES 12 -->
+    <div class="res-card" data-skill="experiment" data-type="article" data-diff="advanced" data-tier="tier2" data-search="pinterest engineering seo ab experiments split testing page clustering causal inference">
+      <div class="res-top">
+        <div class="res-badges">
+          <span class="res-pill pill-tier2">Tier 2: Engineering Masterclass</span>
+          <span class="res-pill pill-format">Tech Article</span>
+          <span class="res-pill pill-free">Free</span>
+          <span class="res-pill" style="background:#f1f5f9; color:#475569;">Advanced</span>
+        </div>
+        <h4 class="res-title">How Pinterest Runs SEO A/B Experiments</h4>
+        <div class="res-author">Pinterest Engineering Team</div>
+        <p class="res-desc">
+          Deep technical dive into page-cluster SEO experimentation, creating matched control and variant groups, and isolating external algorithm shifts.
+        </p>
+        <div class="res-outcome">
+          <strong>Outcome:</strong> Design scientifically valid SEO split-tests without falling into before-and-after attribution traps.
+        </div>
+      </div>
+      <div class="res-footer">
+        <span class="res-meta-time">⏱️ 2.0 Hours</span>
+        <a href="https://medium.com/pinterest-engineering/how-pinterest-runs-seo-a-b-experiments-7d08f3e2b260" target="_blank" class="btn btn-outline btn-sm">Read Tech Article ↗</a>
+      </div>
+    </div>
+
+    <!-- RES 13 -->
+    <div class="res-card" data-skill="tech" data-type="article" data-diff="intermediate" data-tier="tier1" data-search="atlassian product requirements documents prd agile specifications user stories">
+      <div class="res-top">
+        <div class="res-badges">
+          <span class="res-pill pill-tier1">Tier 1: Official</span>
+          <span class="res-pill pill-format">Article / Guide</span>
+          <span class="res-pill pill-free">Free</span>
+          <span class="res-pill" style="background:#f1f5f9; color:#475569;">Intermediate</span>
+        </div>
+        <h4 class="res-title">Product Requirements Documents (PRDs)</h4>
+        <div class="res-author">Atlassian Agile Coach • Official Guide</div>
+        <p class="res-desc">
+          Guide to writing living, collaborative PRDs for engineering and design teams. Outlines user problems, functional scope, edge cases, and success metrics.
+        </p>
+        <div class="res-outcome">
+          <strong>Outcome:</strong> Author clear, developer-ready specifications that eliminate confusion in sprint planning.
+        </div>
+      </div>
+      <div class="res-footer">
+        <span class="res-meta-time">⏱️ 1.5 Hours</span>
+        <a href="https://www.atlassian.com/agile/product-management/requirements" target="_blank" class="btn btn-outline btn-sm">Read PRD Guide ↗</a>
+      </div>
+    </div>
+
+    <!-- RES 14 -->
+    <div class="res-card" data-skill="tech" data-type="article" data-diff="beginner" data-tier="tier1" data-search="atlassian user stories examples templates acceptance criteria gherkin given when then">
+      <div class="res-top">
+        <div class="res-badges">
+          <span class="res-pill pill-tier1">Tier 1: Official</span>
+          <span class="res-pill pill-format">Article / Guide</span>
+          <span class="res-pill pill-free">Free</span>
+          <span class="res-pill" style="background:#f1f5f9; color:#475569;">Beginner</span>
+        </div>
+        <h4 class="res-title">User Stories with Examples and Templates</h4>
+        <div class="res-author">Atlassian Agile Coach • Official Guide</div>
+        <p class="res-desc">
+          Learn how to break complex features into user-centered stories with precise acceptance criteria and Definition of Done standards.
+        </p>
+        <div class="res-outcome">
+          <strong>Outcome:</strong> Write unambiguous tickets that engineering leads can estimate and implement without delay.
+        </div>
+      </div>
+      <div class="res-footer">
+        <span class="res-meta-time">⏱️ 1.5 Hours</span>
+        <a href="https://www.atlassian.com/agile/project-management/user-stories" target="_blank" class="btn btn-outline btn-sm">Read User Story Guide ↗</a>
+      </div>
+    </div>
+
+    <!-- RES 15 -->
+    <div class="res-card" data-skill="data" data-type="course" data-diff="beginner" data-tier="tier1" data-search="sqlbolt interactive sql tutorials select where group by join database queries">
+      <div class="res-top">
+        <div class="res-badges">
+          <span class="res-pill pill-tier1">Tier 1: Interactive</span>
+          <span class="res-pill pill-format">Interactive Course</span>
+          <span class="res-pill pill-free">Free</span>
+          <span class="res-pill" style="background:#f1f5f9; color:#475569;">Beginner</span>
+        </div>
+        <h4 class="res-title">Interactive Lessons on SQL Fundamentals</h4>
+        <div class="res-author">SQLBolt • Interactive Browser Tutorial</div>
+        <p class="res-desc">
+          Hands-on browser-based SQL exercises covering tables, SELECT queries, WHERE constraints, aggregation functions (COUNT, SUM, AVG), and multi-table JOINs.
+        </p>
+        <div class="res-outcome">
+          <strong>Outcome:</strong> Write SQL queries to extract, filter, and aggregate multi-thousand row search console tables.
+        </div>
+      </div>
+      <div class="res-footer">
+        <span class="res-meta-time">⏱️ 3.0 Hours</span>
+        <a href="https://sqlbolt.com/" target="_blank" class="btn btn-outline btn-sm">Open SQLBolt ↗</a>
+      </div>
+    </div>
+
+  </div>
+</section>
