@@ -7,86 +7,55 @@
   <meta name="description" content="A comprehensive, interactive 12-week roadmap for SEO professionals transitioning into Product Management. Master 7 core competencies, explore interactive system architectures, study masterclass articles, read ranked PM books, and build an AI-powered SEO diagnostic assistant.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
 :root {
-  /* Color Palette - Kinetic Electric Tech & Product Intelligence */
-  --bg-body: #f8fafc;
-  --bg-subtle: #f1f5f9;
-  --bg-card: #ffffff;
+  /* Color Palette - Ubersuggest Signature Orange & Crisp White System */
+  --bg-body: #faf8f5;           /* Clean, sunny, warm white paper canvas */
+  --bg-subtle: #f5efe8;         /* Subtle warm stone for contrast areas */
+  --bg-card: #ffffff;           /* Crisp, pure white card background */
   
-  --primary-deep: #0f172a;      /* Deep obsidian slate for authoritative typography */
-  --primary: #1e1b4b;           /* Midnight indigo */
-  --primary-medium: #4f46e5;    /* Vibrant electric indigo - high motivation & cognitive drive */
-  --accent-emerald: #10b981;    /* Verified success & data confidence */
-  --accent-hover: #4338ca;      /* Hover indigo */
-  --accent-cyan: #0284c7;       /* Dynamic cyan / data telemetry */
-  --accent-coral: #f43f5e;      /* Motivation & high urgency */
-  --accent-amber: #f59e0b;      /* Curiosity & strategic alert */
+  --primary-deep: #1c1917;      /* Stone 900 - Deep charcoal black for sharp typographic authority */
+  --primary: #ff5900;           /* Signature Ubersuggest Vibrant Orange */
+  --primary-medium: #ff5900;    /* High-energy motivating orange */
+  --primary-gradient: linear-gradient(135deg, #ff6b35 0%, #ff5900 60%, #ea580c 100%);
   
-  --mint-bg: #eef2ff;           /* Kinetic indigo-tinted surface */
-  --mint-card: #f8fafc;         /* Layered card background */
-  --mint-border: #c7d2fe;       /* Crisp kinetic border */
-  --mint-pill: #e0e7ff;         /* Indigo pill badge background */
-  --mint-text: #3730a3;         /* High-contrast indigo text */
+  --accent-orange: #ff5900;     /* Pure energetic orange */
+  --accent-hover: #e04f00;      /* Deep hover orange */
+  --accent-emerald: #10b981;    /* Fresh emerald green for verified items & progress */
+  --accent-cyan: #0284c7;       /* Data cyan */
+  --accent-coral: #ef4444;      /* High severity drop alert */
+  --accent-amber: #f59e0b;      /* Strategic notice */
   
-  --text-main: #1e293b;         /* Slate 800 for high-contrast crisp readability */
-  --text-muted: #475569;        /* Slate 600 for secondary descriptions */
-  --text-light: #64748b;        /* Slate 500 for metadata */
+  --mint-bg: #fff7ed;           /* Orange 50 - fresh, warm surface for calls to action & highlights */
+  --mint-card: #ffffff;         /* Clean white card surface */
+  --mint-border: #fed7aa;       /* Orange 200 - crisp, elegant warm border */
+  --mint-pill: #ffedd5;         /* Orange 100 - signature warm pill badge */
+  --mint-text: #c2410c;         /* Orange 700 - AAA accessible, punchy, confident text */
+  
+  --text-main: #27272a;         /* Zinc 800 for high-contrast crisp readability */
+  --text-muted: #52525b;        /* Zinc 600 for secondary descriptions */
+  --text-light: #71717a;        /* Zinc 500 for metadata & timestamps */
   --text-on-dark: #ffffff;
   
-  --border-light: #e2e8f0;      /* Standard card and container borders */
-  --border-medium: #cbd5e1;
-  --border-focus: #6366f1;
+  --border-light: #f0e6dd;      /* Warm card and container borders */
+  --border-medium: #e7ded5;
+  --border-focus: #ff5900;      /* Ubersuggest orange focus ring */
   
-  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
-  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.04);
-  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
-  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -4px rgba(15, 23, 42, 0.05);
+  --shadow-xs: 0 1px 2px rgba(255, 89, 0, 0.04);
+  --shadow-sm: 0 2px 6px rgba(255, 89, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 6px 16px -2px rgba(255, 89, 0, 0.08), 0 3px 6px -3px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 14px 28px -4px rgba(255, 89, 0, 0.12), 0 6px 12px -4px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 4px 18px rgba(255, 89, 0, 0.28);
   
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 22px;
   
-  --font-main: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: "Outfit", "Plus Jakarta Sans", sans-serif;
+  --font-main: "Plus Jakarta Sans", "Outfit", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-}
-
-/* Dark Mode: Deep Space Obsidian & Cyber AI Architecture */
-[data-theme="dark"] {
-  --bg-body: #07090e;
-  --bg-subtle: #0f172a;
-  --bg-card: #111827;
-  
-  --primary-deep: #f8fafc;
-  --primary: #818cf8;
-  --primary-medium: #818cf8;
-  --accent-emerald: #34d399;
-  --accent-hover: #a5b4fc;
-  --accent-cyan: #38bdf8;
-  --accent-coral: #fb7185;
-  --accent-amber: #fbbf24;
-  
-  --mint-bg: #1e1b4b;
-  --mint-card: #171f38;
-  --mint-border: #3730a3;
-  --mint-pill: #312e81;
-  --mint-text: #c7d2fe;
-  
-  --text-main: #e2e8f0;
-  --text-muted: #94a3b8;
-  --text-light: #64748b;
-  --text-on-dark: #ffffff;
-  
-  --border-light: #1f2937;
-  --border-medium: #374151;
-  --border-focus: #818cf8;
-  
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 6px 12px -2px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 14px 24px -4px rgba(0, 0, 0, 0.6);
 }
 
 /* Base & Global Styles */
@@ -118,9 +87,11 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
   color: var(--primary-deep);
-  font-weight: 700;
-  line-height: 1.3;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
 }
 
 /* Layout Container */
@@ -161,21 +132,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .brand-badge {
-  background: var(--primary-deep);
+  background: var(--primary-gradient);
   color: #ffffff;
-  padding: 6px 10px;
+  padding: 6px 12px;
   border-radius: var(--radius-sm);
   font-weight: 800;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(255, 89, 0, 0.28);
 }
 
 .brand-title {
-  font-size: 1.05rem;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
   font-weight: 800;
   color: var(--primary-deep);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .brand-subtitle {
@@ -219,10 +192,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-tab-btn.active {
   background-color: var(--mint-pill);
-  color: var(--primary-deep);
+  color: var(--mint-text);
   border-color: var(--mint-border);
-  font-weight: 700;
-  box-shadow: 0 1px 3px rgba(6, 78, 59, 0.12);
+  font-weight: 800;
+  box-shadow: 0 2px 6px rgba(255, 89, 0, 0.14);
 }
 
 /* Quick Metrics in Nav */
@@ -239,7 +212,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 4px 12px;
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--primary-deep);
+  color: var(--mint-text);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -248,36 +221,16 @@ h1, h2, h3, h4, h5, h6 {
 .mini-bar {
   width: 50px;
   height: 6px;
-  background-color: #e2e8f0;
+  background-color: #fce7d2;
   border-radius: 3px;
   overflow: hidden;
 }
 
 .mini-bar-fill {
   height: 100%;
-  background-color: var(--accent-emerald);
+  background-color: var(--primary);
   width: 0%;
   transition: width 0.3s ease;
-}
-
-/* Theme Toggle Button */
-.theme-toggle-btn {
-  background: var(--bg-subtle);
-  border: 1px solid var(--border-medium);
-  color: var(--text-main);
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-}
-
-.theme-toggle-btn:hover {
-  border-color: var(--primary-medium);
-  color: var(--primary-medium);
-  transform: translateY(-1px);
 }
 
 /* Hero Section */
@@ -605,14 +558,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-  background-color: var(--primary);
+  background: var(--primary-gradient);
   color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(255, 89, 0, 0.25);
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-deep);
+  background: linear-gradient(135deg, #ff5900 0%, #e04f00 100%);
   color: #ffffff;
   text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(255, 89, 0, 0.35);
 }
 
 .btn-outline {
@@ -1157,22 +1114,24 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Capstone Project Styling */
 .capstone-hero {
-  background: linear-gradient(135deg, #064e3b 0%, #0f5132 100%);
+  background: var(--primary-gradient);
   color: #ffffff;
   border-radius: var(--radius-xl);
   padding: 30px 34px;
   margin-bottom: 26px;
+  box-shadow: 0 8px 24px -4px rgba(255, 89, 0, 0.25);
 }
 
 .capstone-hero h2 {
+  font-family: var(--font-heading);
   color: #ffffff;
-  font-size: 1.75rem;
+  font-size: 1.85rem;
   margin-bottom: 8px;
 }
 
 .capstone-hero p {
-  color: #d1fae5;
-  font-size: 0.96rem;
+  color: #fff1e5;
+  font-size: 0.98rem;
   max-width: 820px;
   line-height: 1.6;
 }
@@ -1711,7 +1670,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .arch-block-item:hover {
   background: var(--mint-bg);
-  border-color: var(--accent-emerald);
+  border-color: var(--primary);
   transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
 }
@@ -1731,9 +1690,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .arch-block-item.active-node {
-  background: #ecfdf5;
-  border-color: #10b981;
-  box-shadow: 0 0 0 2px #10b981;
+  background: #fff7ed;
+  border-color: #ff5900;
+  box-shadow: 0 0 0 2px #ff5900;
 }
 
 .arch-block-badge {
@@ -2046,14 +2005,14 @@ h1, h2, h3, h4, h5, h6 {
 .pin-dot {
   width: 16px;
   height: 16px;
-  background: var(--primary-deep);
+  background: var(--primary);
   border: 3px solid #ffffff;
   border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 8px rgba(255, 89, 0, 0.45);
 }
 
 .pin-label {
-  background: var(--primary-deep);
+  background: var(--primary);
   color: #ffffff;
   font-size: 0.72rem;
   font-weight: 700;
@@ -2061,6 +2020,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
   margin-top: 4px;
   white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(255, 89, 0, 0.3);
 }
 
 /* ==========================================
@@ -2211,7 +2171,6 @@ h1, h2, h3, h4, h5, h6 {
     </nav>
     
     <div class="nav-metrics">
-      <button id="theme-toggle-btn" class="theme-toggle-btn" onclick="toggleTheme()" title="Switch Theme (Light / Dark)">Theme: Dark</button>
       <div class="mini-progress-pill">
         <span id="nav-progress-text">0% Done</span>
         <div class="mini-bar">
@@ -7157,35 +7116,11 @@ const TASKS_PER_WEEK = 4;
 const TOTAL_TASKS = TOTAL_WEEKS * TASKS_PER_WEEK; // 48
 const TOTAL_ARTIFACTS = 12;
 
-// ==========================================
-// Theme Management (Light / Dark Mode)
-// ==========================================
+// Clean theme initialization - ensuring bright, crisp Ubersuggest aesthetic
 function initTheme() {
-  const savedTheme = safeGetItem('theme');
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const initialTheme = savedTheme ? savedTheme : (prefersDark ? 'dark' : 'light');
-  applyTheme(initialTheme);
+  document.documentElement.removeAttribute('data-theme');
+  safeRemoveItem('theme');
 }
-
-function applyTheme(theme) {
-  const btn = document.getElementById('theme-toggle-btn');
-  if (theme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    if (btn) btn.textContent = 'Theme: Light';
-  } else {
-    document.documentElement.removeAttribute('data-theme');
-    if (btn) btn.textContent = 'Theme: Dark';
-  }
-}
-
-function toggleTheme() {
-  const current = document.documentElement.getAttribute('data-theme');
-  const nextTheme = current === 'dark' ? 'light' : 'dark';
-  applyTheme(nextTheme);
-  safeSetItem('theme', nextTheme);
-}
-
-window.toggleTheme = toggleTheme;
 
 // ==========================================
 // Initialization on DOM Ready
