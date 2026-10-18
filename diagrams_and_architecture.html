@@ -1,0 +1,474 @@
+<!-- TAB: INTERACTIVE ARCHITECTURE & VISUAL DIAGRAMS -->
+<section id="tab-diagrams" class="content-section">
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">System Architecture &amp; Interactive Mental Models</h2>
+      <p class="section-lead">Visual schematics, architectural pipelines, anomaly curve simulators, and quantitative decision engines bridging SEO data to AI product engineering.</p>
+    </div>
+    <div style="font-size: 0.85rem; color: var(--text-light); font-weight: 600;">
+      5 Interactive Visual Systems
+    </div>
+  </div>
+
+  <!-- MODULE 1: THE AI SEO DIAGNOSTIC ARCHITECTURE (TRANSFORMER-INSPIRED) -->
+  <div class="sub-card" style="margin-bottom: 32px; border: 2px solid var(--mint-border);">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 12px;">
+      <div>
+        <span class="badge badge-mint" style="font-size: 0.76rem; margin-bottom: 6px; display: inline-block;">System Blueprint</span>
+        <h3 style="font-size: 1.35rem; color: var(--primary-deep); margin-bottom: 4px;">1. AI SEO Diagnostic Engine Architecture (Encoder-Decoder Pipeline)</h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted);">
+          Inspired by modern Transformer architectures (BERT Encoder + GPT Decoder). Click any block in the diagram to inspect its internal logic, input schemas, and mathematical algorithms.
+        </p>
+      </div>
+      <span style="font-size: 0.8rem; color: var(--primary-medium); font-weight: 700;">Click any block to inspect details</span>
+    </div>
+
+    <!-- The Side-by-Side Architectural Schema -->
+    <div class="arch-schema-container">
+
+      <!-- LEFT COLUMN: THE DIAGNOSTIC ENCODER -->
+      <div class="arch-column arch-encoder">
+        <div class="arch-col-header">
+          <div class="arch-col-tag">ENCODER (Analytical Engine)</div>
+          <div class="arch-col-title">Diagnostic Understanding</div>
+          <div class="arch-col-sub">Pattern Ingestion &amp; Causal Attribution</div>
+        </div>
+
+        <div class="arch-block-item" onclick="inspectArchBlock('gsc-inputs')">
+          <div class="arch-block-badge">Input Layer</div>
+          <div class="arch-block-name">GSC Multi-Dimensional Data</div>
+          <div class="arch-block-desc">Queries, URLs, Clicks, Impressions, CTR, Position (Time Series)</div>
+        </div>
+
+        <div class="arch-arrow-down">&darr;</div>
+
+        <div class="arch-block-item" onclick="inspectArchBlock('temporal-norm')">
+          <div class="arch-block-badge">Normalization</div>
+          <div class="arch-block-name">Temporal &amp; Positional Encoding</div>
+          <div class="arch-block-desc">Day-of-Week Seasonality Normalization &amp; Anonymized Query Filtering</div>
+        </div>
+
+        <div class="arch-arrow-down">&darr;</div>
+
+        <!-- ENCODER CORE BLOCK (Nx) -->
+        <div class="arch-nested-box">
+          <div class="arch-box-label">Nx Diagnostic Processing Stack</div>
+
+          <div class="arch-block-item arch-highlight" onclick="inspectArchBlock('multihead-anomaly')">
+            <div class="arch-block-badge">Attention Layer</div>
+            <div class="arch-block-name">Multi-Head Anomaly Attention</div>
+            <div class="arch-block-desc">Head 1: Drop Shape | Head 2: URL Cluster | Head 3: SERP Shift</div>
+          </div>
+
+          <div class="arch-arrow-down">&darr;</div>
+
+          <div class="arch-block-item" onclick="inspectArchBlock('triangulation-layer')">
+            <div class="arch-block-badge">Add &amp; Norm Layer</div>
+            <div class="arch-block-name">Cross-Data Triangulation</div>
+            <div class="arch-block-desc">Cross-references GA4 Engagement, 5xx Server Logs, Google Updates</div>
+          </div>
+
+          <div class="arch-arrow-down">&darr;</div>
+
+          <div class="arch-block-item" onclick="inspectArchBlock('feedforward-causal')">
+            <div class="arch-block-badge">Classification</div>
+            <div class="arch-block-name">Root-Cause Decision Heuristic</div>
+            <div class="arch-block-desc">Deterministic 5-Whys Logic + Causal Inference Tree</div>
+          </div>
+        </div>
+
+        <div class="arch-arrow-down">&darr;</div>
+
+        <div class="arch-block-item arch-terminal" onclick="inspectArchBlock('latent-diagnosis')">
+          <div class="arch-block-badge">Representation Output</div>
+          <div class="arch-block-name">Latent Diagnostic Vector</div>
+          <div class="arch-block-desc">Confidence Scores, Confirmed Facts, Excluded Hypotheses</div>
+        </div>
+      </div>
+
+      <!-- CENTER BRIDGE CONNECTOR -->
+      <div class="arch-bridge">
+        <div class="arch-bridge-line"></div>
+        <div class="arch-bridge-badge">Cross-Attention Context Transfer</div>
+        <div class="arch-bridge-line"></div>
+      </div>
+
+      <!-- RIGHT COLUMN: THE SOLUTION DECODER -->
+      <div class="arch-column arch-decoder">
+        <div class="arch-col-header">
+          <div class="arch-col-tag">DECODER (Generative Engine)</div>
+          <div class="arch-col-title">Actionable Synthesis</div>
+          <div class="arch-col-sub">Prioritization, PRDs &amp; Remediation</div>
+        </div>
+
+        <div class="arch-block-item" onclick="inspectArchBlock('prompt-grounding')">
+          <div class="arch-block-badge">Prompt Layer</div>
+          <div class="arch-block-name">System Instructions &amp; Guardrails</div>
+          <div class="arch-block-desc">Zero-Hallucination Constraints &amp; SEO Technical Boundaries</div>
+        </div>
+
+        <div class="arch-arrow-down">&darr;</div>
+
+        <!-- DECODER CORE BLOCK (Nx) -->
+        <div class="arch-nested-box">
+          <div class="arch-box-label">Nx Solution Generation Stack</div>
+
+          <div class="arch-block-item" onclick="inspectArchBlock('masked-solution')">
+            <div class="arch-block-badge">Masked Attention</div>
+            <div class="arch-block-name">Feasibility &amp; Risk Filter</div>
+            <div class="arch-block-desc">Masks unviable solutions (High Effort / Low Impact)</div>
+          </div>
+
+          <div class="arch-arrow-down">&darr;</div>
+
+          <div class="arch-block-item arch-highlight" onclick="inspectArchBlock('cross-attention')">
+            <div class="arch-block-badge">Cross Attention</div>
+            <div class="arch-block-name">Diagnostic Context Integration</div>
+            <div class="arch-block-desc">Aligns recommendations strictly with confirmed root causes</div>
+          </div>
+
+          <div class="arch-arrow-down">&darr;</div>
+
+          <div class="arch-block-item" onclick="inspectArchBlock('rice-scoring-layer')">
+            <div class="arch-block-badge">Prioritization Layer</div>
+            <div class="arch-block-name">RICE Mathematical Scoring</div>
+            <div class="arch-block-desc">(Reach &times; Impact &times; Confidence) &divide; Effort Optimization</div>
+          </div>
+        </div>
+
+        <div class="arch-arrow-down">&darr;</div>
+
+        <div class="arch-block-item" onclick="inspectArchBlock('linear-output')">
+          <div class="arch-block-badge">Delivery Layer</div>
+          <div class="arch-block-name">Structured Output Formatter</div>
+          <div class="arch-block-desc">Translates insights into JIRA Stories, PRDs &amp; Executive Briefs</div>
+        </div>
+
+        <div class="arch-arrow-down">&darr;</div>
+
+        <div class="arch-block-item arch-terminal" onclick="inspectArchBlock('final-deliverable')">
+          <div class="arch-block-badge">Execution Output</div>
+          <div class="arch-block-name">Validated Action Plan</div>
+          <div class="arch-block-desc">Given/When/Then Specs + Backtesting Verification Protocol</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Interactive Inspector Drawer for the Architecture -->
+    <div id="arch-inspector-drawer" class="arch-drawer" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <span class="badge badge-mint" id="drawer-badge">Inspector</span>
+        <button class="btn btn-outline btn-sm" onclick="closeArchInspector()">Close Panel [x]</button>
+      </div>
+      <h4 id="drawer-title" style="font-size: 1.15rem; color: var(--primary-deep); margin-bottom: 6px;">Layer Specification</h4>
+      <div id="drawer-content" style="font-size: 0.88rem; color: var(--text-main); line-height: 1.6;">
+        Click on any architecture node above to view its technical implementation.
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 2: INTERACTIVE SEARCH CONSOLE ANOMALY CURVE SIMULATOR -->
+  <div class="sub-card" style="margin-bottom: 32px;">
+    <div class="section-head" style="margin-bottom: 14px;">
+      <div>
+        <span class="badge badge-mint" style="font-size: 0.74rem; margin-bottom: 4px; display: inline-block;">Visual Anomaly Diagnostic</span>
+        <h3 style="font-size: 1.25rem; color: var(--primary-deep);">2. Search Console Drop Geometry Simulator</h3>
+        <p class="section-lead">Toggle between the 4 primary traffic drop shapes identified by Google Search Central to inspect the visual signature and root cause protocols.</p>
+      </div>
+    </div>
+
+    <!-- Curve Selector Buttons -->
+    <div class="curve-toggle-group">
+      <button class="curve-btn active" id="btn-curve-cliff" onclick="selectCurve('cliff')">Shape 1: The Cliff (Precipitous Drop)</button>
+      <button class="curve-btn" id="btn-curve-step" onclick="selectCurve('step')">Shape 2: The Step (Algorithm / AI Overview)</button>
+      <button class="curve-btn" id="btn-curve-slope" onclick="selectCurve('slope')">Shape 3: The Slope (Gradual Erosion)</button>
+      <button class="curve-btn" id="btn-curve-wave" onclick="selectCurve('wave')">Shape 4: The Wave (Cyclic Seasonality)</button>
+    </div>
+
+    <!-- Visual Chart Representation (Pure Responsive SVG) -->
+    <div class="curve-viewer-box">
+      <div class="curve-svg-wrapper">
+        <svg id="curve-svg" viewBox="0 0 600 220" class="curve-svg">
+          <!-- Grid Lines -->
+          <line x1="50" y1="20" x2="570" y2="20" stroke="#e2e8f0" stroke-dasharray="4" />
+          <line x1="50" y1="70" x2="570" y2="70" stroke="#e2e8f0" stroke-dasharray="4" />
+          <line x1="50" y1="120" x2="570" y2="120" stroke="#e2e8f0" stroke-dasharray="4" />
+          <line x1="50" y1="170" x2="570" y2="170" stroke="#e2e8f0" stroke-dasharray="4" />
+
+          <!-- Axes -->
+          <line x1="50" y1="20" x2="50" y2="180" stroke="#64748b" stroke-width="2" />
+          <line x1="50" y1="180" x2="570" y2="180" stroke="#64748b" stroke-width="2" />
+
+          <!-- Axis Labels -->
+          <text x="15" y="25" fill="#64748b" font-size="11" font-family="sans-serif">10K</text>
+          <text x="15" y="75" fill="#64748b" font-size="11" font-family="sans-serif">7.5K</text>
+          <text x="15" y="125" fill="#64748b" font-size="11" font-family="sans-serif">5.0K</text>
+          <text x="15" y="175" fill="#64748b" font-size="11" font-family="sans-serif">2.5K</text>
+          
+          <text x="50" y="200" fill="#64748b" font-size="11" font-family="sans-serif">Day 1</text>
+          <text x="180" y="200" fill="#64748b" font-size="11" font-family="sans-serif">Day 7</text>
+          <text x="310" y="200" fill="#64748b" font-size="11" font-family="sans-serif">Day 14 (Event)</text>
+          <text x="440" y="200" fill="#64748b" font-size="11" font-family="sans-serif">Day 21</text>
+          <text x="540" y="200" fill="#64748b" font-size="11" font-family="sans-serif">Day 28</text>
+
+          <!-- Dynamic Path Component -->
+          <path id="curve-path" d="M 50 40 L 310 40 L 325 160 L 570 160" fill="none" stroke="#dc2626" stroke-width="3" stroke-linecap="round" />
+          
+          <!-- Event Marker Line -->
+          <line id="curve-event-line" x1="310" y1="20" x2="310" y2="180" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3" />
+          <text id="curve-event-text" x="315" y="35" fill="#d97706" font-size="10" font-weight="bold" font-family="sans-serif">Anomaly Trigger Event</text>
+        </svg>
+      </div>
+
+      <!-- Curve Diagnostic Details Card -->
+      <div class="curve-details-card" id="curve-details">
+        <div style="font-size: 0.76rem; font-weight: 800; color: #dc2626; text-transform: uppercase;" id="curve-severity">Severity: Critical (&gt;50% Collapse)</div>
+        <h4 style="font-size: 1.15rem; color: var(--primary-deep); margin: 4px 0 8px 0;" id="curve-title">The Cliff: Sudden Precipitous Drop</h4>
+        <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px;" id="curve-summary">
+          Traffic falls vertically within 24 to 48 hours. This shape almost never represents content staleness or gradual competitor improvements. It represents a binary technical failure.
+        </div>
+        <div class="curve-checklist" id="curve-checklist">
+          <div><strong>Primary Hypotheses:</strong> Site-wide robots.txt blocking, accidental <code>noindex</code> tag injection, DNS resolution failure, or server 5xx outage.</div>
+          <div><strong>Search Console Action:</strong> Immediately inspect URL Inspection tool and Coverage report for crawl blocks. Check Security &amp; Manual Actions tab.</div>
+          <div><strong>PM Triage Protocol:</strong> Coordinate with DevOps/Engineering immediately. File a P0 critical incident ticket before initiating any content edits.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 3: INTERACTIVE LIVE RICE PRIORITIZATION CALCULATOR & 2X2 MATRIX -->
+  <div class="sub-card" style="margin-bottom: 32px;">
+    <div class="section-head" style="margin-bottom: 14px;">
+      <div>
+        <span class="badge badge-mint" style="font-size: 0.74rem; margin-bottom: 4px; display: inline-block;">Interactive Decision Engine</span>
+        <h3 style="font-size: 1.25rem; color: var(--primary-deep);">3. Live RICE Calculator &amp; Opportunity 2&times;2 Matrix</h3>
+        <p class="section-lead">Test real SEO and Product initiatives. Adjust the sliders to see how Reach, Impact, Confidence, and Effort dynamically position initiatives on the Opportunity Matrix.</p>
+      </div>
+    </div>
+
+    <!-- Quick Preset Buttons -->
+    <div style="margin-bottom: 16px; display: flex; gap: 8px; flex-wrap: wrap;">
+      <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); align-self: center;">Try Presets:</span>
+      <button class="btn btn-outline btn-sm" onclick="loadRicePreset('canonical')">Fix Canonical Loops (Quick Win)</button>
+      <button class="btn btn-outline btn-sm" onclick="loadRicePreset('ai-assistant')">AI Diagnostic MVP (Strategic Bet)</button>
+      <button class="btn btn-outline btn-sm" onclick="loadRicePreset('dark-mode')">Custom Dark Mode (Fill-in)</button>
+      <button class="btn btn-outline btn-sm" onclick="loadRicePreset('full-crawler')">Build Full Crawler (Time Sink)</button>
+    </div>
+
+    <div class="rice-layout">
+      <!-- Calculator Controls Column -->
+      <div class="rice-controls">
+        
+        <div class="slider-group">
+          <div class="slider-header">
+            <label for="rice-reach">Reach (Users / Sessions Impacted)</label>
+            <span class="slider-val" id="disp-reach">50,000</span>
+          </div>
+          <input type="range" id="rice-reach" min="1000" max="100000" step="1000" value="50000" oninput="calculateRice()">
+          <div class="slider-sub">Monthly unique search users interacting with the impacted URLs.</div>
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-header">
+            <label for="rice-impact">Impact Multiplier</label>
+            <span class="slider-val" id="disp-impact">2.0 (High)</span>
+          </div>
+          <input type="range" id="rice-impact" min="0.25" max="3" step="0.25" value="2" oninput="calculateRice()">
+          <div class="slider-sub">0.25 = Minimal | 0.5 = Low | 1.0 = Medium | 2.0 = High | 3.0 = Massive</div>
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-header">
+            <label for="rice-confidence">Confidence Factor</label>
+            <span class="slider-val" id="disp-confidence">80%</span>
+          </div>
+          <input type="range" id="rice-confidence" min="20" max="100" step="10" value="80" oninput="calculateRice()">
+          <div class="slider-sub">50% = Moonshot/Guess | 80% = Interview Data | 100% = Controlled Test</div>
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-header">
+            <label for="rice-effort">Effort (Person-Weeks)</label>
+            <span class="slider-val" id="disp-effort">2.0 weeks</span>
+          </div>
+          <input type="range" id="rice-effort" min="0.5" max="12" step="0.5" value="2" oninput="calculateRice()">
+          <div class="slider-sub">Combined engineering, design, and QA weeks required.</div>
+        </div>
+
+        <!-- Calculated Score Callout -->
+        <div class="rice-score-display">
+          <div>
+            <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 800; color: var(--mint-text);">Calculated RICE Score</div>
+            <div style="font-size: 2.2rem; font-weight: 800; color: var(--primary-deep);" id="disp-rice-score">40,000</div>
+          </div>
+          <div style="text-align: right;">
+            <span class="badge badge-mint" id="disp-quadrant-badge">Quick Win</span>
+            <div style="font-size: 0.78rem; color: var(--text-light); margin-top: 4px;" id="disp-priority-action">High Execution Priority</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Visual 2x2 Matrix Column -->
+      <div class="rice-matrix-box">
+        <div style="font-size: 0.85rem; font-weight: 700; color: var(--primary-deep); margin-bottom: 8px; text-align: center;">
+          Value vs. Effort Opportunity Matrix (2&times;2)
+        </div>
+        
+        <div class="matrix-grid-visual">
+          <!-- Quadrant 1: Quick Wins -->
+          <div class="matrix-quad quad-quickwin">
+            <div class="quad-title">Quick Wins (High Priority)</div>
+            <div class="quad-desc">High Impact &bull; Low Effort</div>
+          </div>
+
+          <!-- Quadrant 2: Strategic Bets -->
+          <div class="matrix-quad quad-strategic">
+            <div class="quad-title">Strategic Bets (Core Roadmap)</div>
+            <div class="quad-desc">High Impact &bull; High Effort</div>
+          </div>
+
+          <!-- Quadrant 3: Fill-ins -->
+          <div class="matrix-quad quad-fillin">
+            <div class="quad-title">Fill-Ins (Low Priority)</div>
+            <div class="quad-desc">Low Impact &bull; Low Effort</div>
+          </div>
+
+          <!-- Quadrant 4: Time Sinks -->
+          <div class="matrix-quad quad-timesink">
+            <div class="quad-title">Time Sinks (Avoid / Kill)</div>
+            <div class="quad-desc">Low Impact &bull; High Effort</div>
+          </div>
+
+          <!-- Dynamic Target Pin -->
+          <div id="matrix-pin" class="matrix-pin" style="top: 25%; left: 25%;">
+            <div class="pin-dot"></div>
+            <div class="pin-label" id="pin-label">Your Initiative</div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-light); margin-top: 6px;">
+          <span>&larr; Low Effort (Fast)</span>
+          <span>High Effort (Slow) &rarr;</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 4: INTERACTIVE ROOT-CAUSE DECISION TREE FLOWCHART -->
+  <div class="sub-card" style="margin-bottom: 32px;">
+    <div class="section-head" style="margin-bottom: 14px;">
+      <div>
+        <span class="badge badge-mint" style="font-size: 0.74rem; margin-bottom: 4px; display: inline-block;">Flowchart Engine</span>
+        <h3 style="font-size: 1.25rem; color: var(--primary-deep);">4. Root-Cause Decision Tree: From Symptom to Diagnosis</h3>
+        <p class="section-lead">Walk through the deterministic branching logic implemented in your AI Diagnostic Assistant. Click each decision branch to simulate a live diagnostic investigation.</p>
+      </div>
+    </div>
+
+    <div class="tree-container">
+      
+      <!-- Step 1 -->
+      <div class="tree-step-box">
+        <div class="tree-step-num">Step 1</div>
+        <div class="tree-step-title">Initial Anomaly Trigger</div>
+        <div class="tree-step-desc">Search Console reports an organic click drop of &gt;15% WoW.</div>
+        <div class="tree-buttons">
+          <button class="tree-btn active" id="tree-s1-a" onclick="advanceTree(1, 'site')">Scenario A: Site-wide Drop (All Folders)</button>
+          <button class="tree-btn" id="tree-s1-b" onclick="advanceTree(1, 'folder')">Scenario B: Directory-Isolated (/blog/ only)</button>
+        </div>
+      </div>
+
+      <div class="tree-connector">&darr;</div>
+
+      <!-- Step 2 -->
+      <div class="tree-step-box">
+        <div class="tree-step-num">Step 2</div>
+        <div class="tree-step-title">Impression vs. Ranking Signal Triangulation</div>
+        <div class="tree-step-desc" id="tree-step2-desc">Did total impressions drop proportionally with clicks, or did impressions stay flat while CTR collapsed?</div>
+        <div class="tree-buttons">
+          <button class="tree-btn active" id="tree-s2-a" onclick="advanceTree(2, 'impr-drop')">Path A: Impressions &amp; Average Position Collapsed</button>
+          <button class="tree-btn" id="tree-s2-b" onclick="advanceTree(2, 'ctr-drop')">Path B: Impressions Stable, but CTR Collapsed</button>
+        </div>
+      </div>
+
+      <div class="tree-connector">&darr;</div>
+
+      <!-- Step 3: Diagnostic Output Box -->
+      <div class="tree-step-box" style="background: var(--mint-bg); border-color: var(--mint-border);">
+        <div class="tree-step-num" style="background: var(--primary-deep); color: #ffffff;">Diagnosis</div>
+        <div class="tree-step-title" style="color: var(--primary-deep);" id="tree-diagnosis-title">Algorithmic Relevance or Technical De-indexing</div>
+        <div class="tree-step-desc" style="font-size: 0.9rem;" id="tree-diagnosis-body">
+          <strong>Synthesized Root Cause:</strong> A site-wide drop in impressions accompanied by position degradation indicates a Google Core Algorithm Update or severe indexing disruption.
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; background: #ffffff; padding: 10px 14px; border-radius: 6px; border: 1px solid var(--border-light);" id="tree-action-plan">
+          <strong>Recommended Action:</strong> Cross-reference with the Google Search Status Dashboard. Audit thin content quality, E-E-A-T signals, and review recent site-wide template changes.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODULE 5: THE SEO TO PM COMPETENCY TRANSFORMATION MAP -->
+  <div class="sub-card">
+    <div class="section-head" style="margin-bottom: 14px;">
+      <div>
+        <span class="badge badge-mint" style="font-size: 0.74rem; margin-bottom: 4px; display: inline-block;">Career Transformation Model</span>
+        <h3 style="font-size: 1.25rem; color: var(--primary-deep);">5. The Dual-Competency Transformation Matrix</h3>
+        <p class="section-lead">A visual mapping of how your 2 years of tactical SEO experience convert into high-leverage Product Management superpowers.</p>
+      </div>
+    </div>
+
+    <div class="table-responsive">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width: 28%;">Your 2-Year SEO Foundation</th>
+            <th style="width: 14%; text-align: center;">Transformation</th>
+            <th style="width: 28%;">Your Transferable PM Superpower</th>
+            <th style="width: 30%;">AI Diagnostic Tool Application</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Query Log Analysis:</strong> Sorting search queries by volume and difficulty in Semrush / GSC.</td>
+            <td style="text-align: center; color: var(--primary-medium); font-weight: 800;">&rarr; Transformed into &rarr;</td>
+            <td><strong>User Discovery &amp; JTBD:</strong> Treating queries as behavioral pain points and latent customer jobs.</td>
+            <td>Automated classification of user frustration patterns from Search Console query intent shifts.</td>
+          </tr>
+          <tr>
+            <td><strong>Traffic Drop Troubleshooting:</strong> Staring at GSC lines and guessing why clicks went down.</td>
+            <td style="text-align: center; color: var(--primary-medium); font-weight: 800;">&rarr; Transformed into &rarr;</td>
+            <td><strong>Root Cause Analysis (RCA):</strong> Using 5 Whys, fishbone diagrams, and isolating blast radius.</td>
+            <td>Deterministic diagnostic rules engine that eliminates false hypotheses and classifies drop geometries.</td>
+          </tr>
+          <tr>
+            <td><strong>Backlog of SEO Recommendations:</strong> Sending 40-page audit PDFs that developers ignore.</td>
+            <td style="text-align: center; color: var(--primary-medium); font-weight: 800;">&rarr; Transformed into &rarr;</td>
+            <td><strong>RICE Strategic Prioritization:</strong> Transparent mathematical scoring defending high-leverage bets.</td>
+            <td>Automated RICE ranker that orders diagnostic recommendations by business impact and effort.</td>
+          </tr>
+          <tr>
+            <td><strong>Keyword Rank Dashboards:</strong> Building Looker Studio reports tracking #1-3 rankings.</td>
+            <td style="text-align: center; color: var(--primary-medium); font-weight: 800;">&rarr; Transformed into &rarr;</td>
+            <td><strong>Metric Trees &amp; Retention:</strong> North Star Metrics, leading input indicators, and cohort curves.</td>
+            <td>Tracking Weekly Resolved Diagnoses and Day-30 user return cohorts instead of vanity views.</td>
+          </tr>
+          <tr>
+            <td><strong>On-Page Content Tweaks:</strong> Writing longer blog posts and changing meta titles.</td>
+            <td style="text-align: center; color: var(--primary-medium); font-weight: 800;">&rarr; Transformed into &rarr;</td>
+            <td><strong>Falsifiable Split-Testing:</strong> Setting up page-cluster experiments with matched control groups.</td>
+            <td>Backtesting diagnostic engine accuracy against 10 verified historical traffic drop datasets.</td>
+          </tr>
+          <tr>
+            <td><strong>Technical SEO Audits:</strong> Screaming Frog crawls of broken canonicals and 404 links.</td>
+            <td style="text-align: center; color: var(--primary-medium); font-weight: 800;">&rarr; Transformed into &rarr;</td>
+            <td><strong>Technical PRDs &amp; User Stories:</strong> Given/When/Then acceptance criteria and Definition of Done.</td>
+            <td>Engineering-ready tickets that software developers can estimate and implement without friction.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</section>

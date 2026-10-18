@@ -22,9 +22,16 @@ The roadmap centers around an early-stage AI product capstone: **"AI-Powered SEO
 6. **Experimentation & Critical Thinking:** Falsifiable hypothesis testing, SEO split-testing across URL clusters, confounding factor isolation, and causal attribution.
 7. **Technical Communication & Requirements:** Agile user stories, Gherkin (Given/When/Then) acceptance criteria, data schemas, and developer-ready PRDs.
 
-## Interactive Features
+## Interactive Features & Systems
+- **System Architecture & Transformer Blueprint:** Interactive Transformer-inspired architecture (Encoder-Decoder pipeline) with clickable node inspector detailing GSC ingestion, anomaly attention heads, and solution decoders.
+- **Search Console Drop Geometry Simulator:** Responsive SVG simulator modeling Cliff, Step, Slope, and Wave traffic anomalies with diagnostic triage checklists.
+- **Live RICE Calculator & 2x2 Matrix:** Dynamic sliders for Reach, Impact, Confidence, and Effort live calculating RICE scores and positioning initiatives on an interactive Opportunity Matrix.
+- **Root-Cause Decision Tree Flowchart:** Interactive diagnostic debugger moving from symptom to verified root cause.
+- **Dual-Competency Transformation Matrix:** Visual mapping translating 2 years of tactical SEO experience into senior Product Management superpowers.
+- **7 Masterclass Articles:** Full educational reading pieces covering GSC triage, JTBD, RICE prioritization, Metric Trees, Usability Heuristics, Split-Testing, and PRD authoring.
+- **12 Ranked Product Management Books:** Curated reading list ranked by strategic value from Mostafa Nageeb's PM masterclass.
 - **Dynamic Progress Engine:** Tracks 48 weekly milestones and 12 capstone portfolio artifacts.
-- **Embedded YouTube Masterclasses:** Direct video lessons from Google Search Central, Harvard Business School, and Figma.
+- **Embedded Video Masterclasses:** Direct video lessons from Google Search Central, Harvard Business School, Figma, and PM leadership.
 - **Verified Resource Library:** 100% authenticated links from Google Search Central, Atlassian, Nielsen Norman Group, Amplitude, and SQLBolt.
 - **Interactive Multi-Facet Filters:** Filter resources by skill, format, difficulty, and access.
 - **Personal Learning Log & Phase Notes:** Auto-saved study log and reflection areas using local browser storage.
@@ -36,14 +43,18 @@ The roadmap centers around an early-stage AI product capstone: **"AI-Powered SEO
 ## Repository Structure
 - `index.html` - Primary production deployment file for GitHub Pages (pure HTML5, CSS3, Vanilla JS).
 - `seo_product_management_learning_roadmap.html` - Standalone distribution file.
-- `styles.css` - Clean typography, responsive grid layout, and hidden scrollbars.
-- `app.js` - State engine, local storage handling, interactive filters, and progress calculations.
+- `styles.css` - Clean typography (Plus Jakarta Sans), responsive grid layout, and zero emojis.
+- `app.js` - State engine, local storage handling, interactive architecture inspector, curve simulator, RICE engine, filters, and progress calculations.
 - Modular sections:
-  - `header_and_overview.html`
-  - `roadmap_weeks.html`
-  - `competencies.html`
-  - `capstone.html`
-  - `video_masterclasses.html`
-  - `resources.html`
-  - `english_and_glossary.html`
-  - `dashboard_and_guidance.html`
+  - `header_and_overview.html` - Sticky navigation, hero orientation, and dual-competency matrix.
+  - `roadmap_weeks.html` - 12-week sequential curriculum with weekly deliverables.
+  - `competencies.html` - Deep dives into the 7 shared competencies.
+  - `diagrams_and_architecture.html` - Transformer architecture, drop simulator, RICE matrix, and decision tree.
+  - `articles.html` - 7 full-length educational masterclass articles.
+  - `video_masterclasses.html` - Curated and embedded video masterclasses.
+  - `books_library.html` - 12 ranked PM books with bridges to SEO and AI.
+  - `capstone.html` - AI-powered SEO diagnostic assistant MVP blueprint.
+  - `resources.html` - Filterable database of authenticated learning resources.
+  - `english_and_glossary.html` - Professional English vocabulary and executive phrasing.
+  - `dashboard_and_guidance.html` - Interactive learning log, phase notes, and PM readiness rubric.
+
